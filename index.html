@@ -9,13 +9,27 @@
     <title>I Gede Wibhu Natha Abhiyoga — Portofolio</title>
     <meta
       name="description"
-      content="Portofolio dan pengalaman organisasi I Gede Wibhu Natha Abhiyoga, mahasiswa Teknologi Medis ITS."
+      content="Portofolio I Gede Wibhu Natha Abhiyoga — mahasiswa Teknologi Kedokteran ITS, koordinator sarana & prasarana, dan pegiat kompetisi ilmiah nasional."
     />
-    <meta name="theme-color" id="themeColorMeta" content="#07111f" />
+    <meta name="theme-color" id="themeColorMeta" content="#05070d" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta
+      property="og:title"
+      content="I Gede Wibhu Natha Abhiyoga — Portofolio"
+    />
+    <meta
+      property="og:description"
+      content="Mahasiswa Teknologi Kedokteran ITS. Koordinator Sarana & Prasarana untuk acara berskala provinsi."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235eead4'/%3E%3Ctext x='16' y='22' font-size='18' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%2307111f'%3EA%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%235eead4'/%3E%3Ctext x='16' y='22' font-size='17' font-family='Georgia,serif' font-style='italic' font-weight='700' text-anchor='middle' fill='%2305070d'%3EA%3C/text%3E%3C/svg%3E"
     />
+
     <script>
       (function () {
         var stored = null;
@@ -30,10 +44,11 @@
         document.documentElement.setAttribute("data-theme", theme);
       })();
     </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -41,153 +56,315 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+    <!-- ===== icon sprite ===== -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="i-package" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+          <path d="m3.3 7 8.7 5 8.7-5M12 22V12M7.5 4.27l9 5.15" />
+        </g>
+        <g id="i-users" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+        </g>
+        <g id="i-zap" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+        </g>
+        <g id="i-clipboard" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="8" height="4" x="8" y="2" rx="1" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M12 11h4M12 16h4M8 11h.01M8 16h.01" />
+        </g>
+        <g id="i-video" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m16 13 5.22 3.48a.5.5 0 0 0 .78-.41V7.87a.5.5 0 0 0-.75-.43L16 10.5" />
+          <rect x="2" y="6" width="14" height="12" rx="2" />
+        </g>
+        <g id="i-trophy" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16" />
+          <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+        </g>
+        <g id="i-award" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="6" />
+          <path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11" />
+        </g>
+        <g id="i-medal" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15M11 12 5.12 2.2M13 12l5.88-9.8M8 7h8" />
+          <circle cx="12" cy="17" r="5" />
+        </g>
+        <g id="i-star" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m12 2.5 2.9 5.88 6.49.95-4.7 4.58 1.11 6.46L12 17.32l-5.8 3.05 1.1-6.46-4.69-4.58 6.49-.95z" />
+        </g>
+        <g id="i-flask" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0M5.52 16h12.96" />
+        </g>
+        <g id="i-pencil" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.17 6.81a1 1 0 0 0-3.98-3.99L3.84 16.17a2 2 0 0 0-.5.83l-1.32 4.35a.5.5 0 0 0 .62.63l4.35-1.32a2 2 0 0 0 .83-.5z" />
+          <path d="m15 5 4 4" />
+        </g>
+        <g id="i-image" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <circle cx="9" cy="9" r="2" />
+          <path d="m21 15-3.09-3.09a2 2 0 0 0-2.83 0L6 21" />
+        </g>
+        <g id="i-bulb" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5M9 18h6M10 22h4" />
+        </g>
+        <g id="i-cap" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z" />
+          <path d="M22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+        </g>
+        <g id="i-mail" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </g>
+        <g id="i-phone" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </g>
+        <g id="i-pin" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0" />
+          <circle cx="12" cy="10" r="3" />
+        </g>
+        <g id="i-arrow" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 7h10v10M7 17 17 7" />
+        </g>
+        <g id="i-moon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </g>
+        <g id="i-sun" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </g>
+        <g id="i-menu" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </g>
+        <g id="i-close" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </g>
+        <g id="i-left" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m15 18-6-6 6-6" />
+        </g>
+        <g id="i-right" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6" />
+        </g>
+      </defs>
+    </svg>
+
+    <div class="grain" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    <div class="cursor" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <div class="loader" id="loader" aria-hidden="true">
+      <div class="loader-inner">
+        <span class="loader-name">Wibhu Natha Abhiyoga</span>
+        <div class="loader-bar"><span id="loaderFill"></span></div>
+      </div>
+    </div>
+
     <nav class="nav" id="siteNav">
       <a href="#home" class="brand">
         <span class="brand-mark">A</span>
         <span class="brand-name">I Gede Wibhu Natha Abhiyoga</span>
       </a>
-      <div class="nav-links">
-        <a href="#about">Tentang</a>
-        <a href="#pengalaman">Pengalaman</a>
-        <a href="#prestasi">Prestasi</a>
-        <a href="#contact">Kontak</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about"><span>Tentang</span></a>
+        <a href="#pengalaman"><span>Pengalaman</span></a>
+        <a href="#prestasi"><span>Prestasi</span></a>
+        <a href="#contact"><span>Kontak</span></a>
       </div>
-      <button
-        class="theme-toggle"
-        id="themeToggle"
-        type="button"
-        aria-label="Ganti ke mode terang"
-        aria-pressed="false"
-      >
-        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-          <path
-            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-            fill="currentColor"
-          />
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-          <circle cx="12" cy="12" r="4" fill="currentColor" />
-          <path
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
-          />
-        </svg>
-      </button>
+      <div class="nav-actions">
+        <button
+          class="icon-btn"
+          id="themeToggle"
+          type="button"
+          aria-label="Ganti ke mode terang"
+          aria-pressed="false"
+        >
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24"><use href="#i-moon" /></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24"><use href="#i-sun" /></svg>
+        </button>
+        <button
+          class="icon-btn menu-btn"
+          id="menuToggle"
+          type="button"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24"><use href="#i-menu" /></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24"><use href="#i-close" /></svg>
+        </button>
+      </div>
     </nav>
 
-    <header class="hero">
-      <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
-      <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#about"><span class="mm-num">01</span> Tentang</a>
+      <a href="#pengalaman"><span class="mm-num">02</span> Pengalaman</a>
+      <a href="#prestasi"><span class="mm-num">03</span> Prestasi</a>
+      <a href="#contact"><span class="mm-num">04</span> Kontak</a>
+    </div>
+
+    <header class="hero" id="home">
+      <div class="hero-blob hero-blob-1" data-parallax="0.18" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-2" data-parallax="-0.12" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
 
-      <section class="hero-content" id="home">
-        <div>
+      <div class="hero-inner">
+        <div class="hero-copy">
           <p class="eyebrow">Portofolio &amp; Pengalaman Organisasi</p>
-          <h1>Halo, saya <span>Abhi</span>.</h1>
-          <p class="intro">
-            Mahasiswa tahun pertama Teknologi Kedokteran di Institut Teknologi
-            Sepuluh Nopember yang aktif, teliti, dan terbiasa bekerja di
-            lapangan. Berpengalaman dua kali sebagai Koordinator Divisi Sarana
-            dan Prasarana pada acara berskala provinsi, dengan kompetensi pada
-            perencanaan kebutuhan, manajemen inventaris, survei lokasi,
-            koordinasi vendor, serta penanganan kendala logistik di bawah
-            tekanan acara.
-          </p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#pengalaman">Lihat Pengalaman</a>
-            <a class="btn btn-secondary" href="#contact">Hubungi Saya</a>
+          <h1 class="display split">Halo, saya <em>Abhi.</em></h1>
+
+          <div class="hero-chips">
+            <span class="chip">Teknologi Kedokteran ITS</span>
+            <span class="chip">Koordinator Sarpras</span>
+            <span class="chip">Surabaya</span>
           </div>
 
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <strong>4</strong>
+          <p class="lead">
+            Mahasiswa tahun pertama Teknologi Kedokteran di Institut Teknologi
+            Sepuluh Nopember yang aktif, teliti, dan terbiasa bekerja di
+            lapangan. Dua kali menjabat Koordinator Divisi Sarana dan Prasarana
+            pada acara berskala provinsi — merencanakan kebutuhan, mengelola
+            inventaris, mensurvei lokasi, mengoordinasi vendor, dan menangani
+            kendala logistik di bawah tekanan acara.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary magnetic" href="#pengalaman">
+              Lihat Pengalaman
+              <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-arrow" /></svg>
+            </a>
+            <a class="btn btn-ghost magnetic" href="#contact">Hubungi Saya</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong data-count="4">0</strong>
               <span>Organisasi &amp; kepanitiaan</span>
             </div>
-            <div class="hero-stat">
-              <strong>2×</strong>
+            <div class="stat">
+              <strong data-count="2" data-suffix="×">0</strong>
               <span>Koordinator Sarpras</span>
             </div>
-            <div class="hero-stat">
-              <strong>8</strong>
+            <div class="stat">
+              <strong data-count="8">0</strong>
               <span>Kompetisi diikuti</span>
             </div>
           </div>
         </div>
 
-        <div class="card-highlight">
-          <div class="card-highlight-glow" aria-hidden="true"></div>
-          <h3>Yang saya kuasai</h3>
-          <ul>
+        <aside class="profile-card" data-parallax="-0.05">
+          <div class="pc-glow" aria-hidden="true"></div>
+          <div class="pc-head">
+            <div class="pc-avatar">A</div>
+            <div>
+              <p class="pc-name">Wibhu Natha Abhiyoga</p>
+              <p class="pc-role">Logistik &amp; Sarana Prasarana</p>
+            </div>
+          </div>
+          <div class="pc-status">
+            <span class="dot"></span> Terbuka untuk kolaborasi kepanitiaan
+          </div>
+          <div class="pc-divider"></div>
+          <p class="pc-label">Yang saya kuasai</p>
+          <ul class="pc-list">
             <li>
-              <span class="skill-icon" aria-hidden="true">📦</span>
+              <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-package" /></svg></span>
               Manajemen logistik &amp; inventaris acara
             </li>
             <li>
-              <span class="skill-icon" aria-hidden="true">🤝</span>
+              <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-users" /></svg></span>
               Koordinasi tim lintas divisi
             </li>
             <li>
-              <span class="skill-icon" aria-hidden="true">⚡</span>
+              <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-zap" /></svg></span>
               Problem-solving cepat di lapangan
             </li>
           </ul>
-        </div>
-      </section>
+        </aside>
+      </div>
 
-      <a class="scroll-cue" href="#about" aria-label="Gulir ke bawah">
-        <span></span>
-      </a>
+      <a class="scroll-cue" href="#about" aria-label="Gulir ke bawah"><span></span></a>
     </header>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span>Manajemen Logistik</span><i>✳</i>
+        <span>Perencanaan Pengadaan</span><i>✳</i>
+        <span>Koordinasi Tim</span><i>✳</i>
+        <span>Problem Solving</span><i>✳</i>
+        <span>Manajemen Waktu</span><i>✳</i>
+        <span>Fotografi &amp; Videografi</span><i>✳</i>
+      </div>
+    </div>
+
     <main id="main-content">
+      <!-- ===== TENTANG ===== -->
       <section class="section reveal" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">Tentang Saya</p>
-          <h2>Siap turun tangan langsung di lapangan</h2>
-        </div>
-        <div class="about-grid">
+        <header class="section-head">
+          <p class="section-num">01</p>
           <div>
-            <p>
-              Saya percaya bahwa setiap acara berjalan lancar karena
-              perencanaan yang matang dan kesiapan menghadapi kendala di
-              lapangan. Dengan pendekatan yang teliti dan terbiasa bekerja
-              langsung di lokasi, saya berusaha memastikan setiap kebutuhan
-              perlengkapan dan logistik terpenuhi tepat waktu.
+            <p class="eyebrow">Tentang Saya</p>
+            <h2 class="split">Siap turun tangan langsung di lapangan</h2>
+          </div>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-main">
+            <p class="about-lead">
+              Saya percaya setiap acara berjalan lancar karena perencanaan yang
+              matang dan kesiapan menghadapi kendala di lokasi.
             </p>
-            <div class="education">
-              <h3>Pendidikan</h3>
-              <p>
-                <strong>Institut Teknologi Sepuluh Nopember</strong> —
-                Teknologi Kedokteran, Surabaya (Jul 2025 – Jul 2029)
+            <p>
+              Dengan pendekatan yang teliti dan terbiasa bekerja langsung di
+              lapangan, saya memastikan setiap kebutuhan perlengkapan dan
+              logistik terpenuhi tepat waktu — dari survei awal, negosiasi
+              vendor, sampai eksekusi di hari-H.
+            </p>
+
+            <div class="timeline">
+              <p class="block-label">
+                <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-cap" /></svg>
+                Pendidikan
               </p>
-              <p>
-                <strong>SMA Negeri 1 Bangli</strong> — Bangli, Bali (Jul 2022
-                – Mei 2025)
-              </p>
+              <div class="tl-item">
+                <span class="tl-year">2025 — 2029</span>
+                <h3>Institut Teknologi Sepuluh Nopember</h3>
+                <p>Teknologi Kedokteran · Surabaya</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-year">2022 — 2025</span>
+                <h3>SMA Negeri 1 Bangli</h3>
+                <p>Bangli, Bali</p>
+              </div>
             </div>
           </div>
-          <div class="skills">
-            <h3>Keahlian</h3>
+
+          <div class="skills-panel">
+            <p class="block-label">Keahlian</p>
             <div class="tag-list">
-              <span>Manajemen Logistik & Inventaris</span>
-              <span>Perencanaan & Penjadwalan Pengadaan</span>
+              <span>Manajemen Logistik &amp; Inventaris</span>
+              <span>Perencanaan &amp; Penjadwalan Pengadaan</span>
               <span>Koordinasi Tim</span>
               <span>Problem-Solving</span>
               <span>Manajemen Waktu</span>
-              <span>Fotografi & Videografi</span>
+              <span>Fotografi &amp; Videografi</span>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ===== PENGALAMAN ===== -->
       <section class="section reveal" id="pengalaman">
-        <div class="section-heading">
-          <p class="eyebrow">Pengalaman</p>
-          <h2>Organisasi &amp; kepanitiaan yang pernah saya jalani</h2>
-          <p class="section-hint">Scroll untuk membalik kartu ke organisasi berikutnya.</p>
-        </div>
+        <header class="section-head">
+          <p class="section-num">02</p>
+          <div>
+            <p class="eyebrow">Pengalaman</p>
+            <h2 class="split">Organisasi &amp; kepanitiaan yang saya jalani</h2>
+            <p class="section-hint">Scroll untuk membalik kartu ke organisasi berikutnya.</p>
+          </div>
+        </header>
       </section>
 
       <div
@@ -200,20 +377,28 @@
         <div class="deck-sticky">
           <div class="deck-stage" id="deckStage">
             <article class="deck-card" aria-roledescription="slide">
-              <div class="deck-card-face">
-                <span class="deck-index">01 / 04</span>
-                <h3>Divisi Perlengkapan (Equipment)</h3>
+              <div class="deck-face">
+                <div class="deck-top">
+                  <span class="deck-ic"><svg width="20" height="20" viewBox="0 0 24 24"><use href="#i-package" /></svg></span>
+                  <span class="deck-index">01 / 04</span>
+                </div>
+                <h3>Divisi Perlengkapan</h3>
                 <p class="card-meta">SWEET TALKS · Mei 2026</p>
                 <p>
                   Menyiapkan, menata, dan mengelola perlengkapan acara, serta
                   merespons kebutuhan teknis secara cepat selama kegiatan
                   berlangsung.
                 </p>
+                <div class="deck-tags"><span>Equipment</span><span>Eksekusi Lapangan</span></div>
               </div>
             </article>
+
             <article class="deck-card" aria-roledescription="slide">
-              <div class="deck-card-face">
-                <span class="deck-index">02 / 04</span>
+              <div class="deck-face">
+                <div class="deck-top">
+                  <span class="deck-ic"><svg width="20" height="20" viewBox="0 0 24 24"><use href="#i-clipboard" /></svg></span>
+                  <span class="deck-index">02 / 04</span>
+                </div>
                 <h3>Koordinator Sarana &amp; Prasarana</h3>
                 <p class="card-meta">CAKRA 2024 · Okt 2024</p>
                 <p>
@@ -221,60 +406,66 @@
                   inventaris aset, dan menjadi penghubung utama dengan vendor
                   eksternal.
                 </p>
+                <div class="deck-tags"><span>Koordinator</span><span>Vendor</span><span>Inventaris</span></div>
               </div>
             </article>
+
             <article class="deck-card" aria-roledescription="slide">
-              <div class="deck-card-face">
-                <span class="deck-index">03 / 04</span>
+              <div class="deck-face">
+                <div class="deck-top">
+                  <span class="deck-ic"><svg width="20" height="20" viewBox="0 0 24 24"><use href="#i-clipboard" /></svg></span>
+                  <span class="deck-index">03 / 04</span>
+                </div>
                 <h3>Koordinator Sarana &amp; Prasarana</h3>
                 <p class="card-meta">RADIANT 2024 · Des 2024</p>
                 <p>
                   Menyusun kebutuhan fasilitas pelatihan, mengelola aset
                   kegiatan, dan menangani kendala logistik mendadak di lokasi.
                 </p>
+                <div class="deck-tags"><span>Koordinator</span><span>Fasilitas</span></div>
               </div>
             </article>
+
             <article class="deck-card" aria-roledescription="slide">
-              <div class="deck-card-face">
-                <span class="deck-index">04 / 04</span>
+              <div class="deck-face">
+                <div class="deck-top">
+                  <span class="deck-ic"><svg width="20" height="20" viewBox="0 0 24 24"><use href="#i-video" /></svg></span>
+                  <span class="deck-index">04 / 04</span>
+                </div>
                 <h3>Divisi Digital, Media &amp; Komunikasi</h3>
                 <p class="card-meta">GENESIS · Agu 2023 – Mar 2025</p>
                 <p>
                   Memproduksi konten digital dan mendokumentasikan kegiatan
                   organisasi riset ilmiah siswa melalui foto dan video.
                 </p>
+                <div class="deck-tags"><span>Konten</span><span>Dokumentasi</span></div>
               </div>
             </article>
           </div>
+
           <div class="deck-controls">
-            <button
-              type="button"
-              class="slide-btn"
-              id="deckPrev"
-              aria-label="Organisasi sebelumnya"
-            >
-              ‹
+            <button type="button" class="slide-btn" id="deckPrev" aria-label="Organisasi sebelumnya">
+              <svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-left" /></svg>
             </button>
             <div class="deck-dots" id="deckDots"></div>
-            <button
-              type="button"
-              class="slide-btn"
-              id="deckNext"
-              aria-label="Organisasi berikutnya"
-            >
-              ›
+            <button type="button" class="slide-btn" id="deckNext" aria-label="Organisasi berikutnya">
+              <svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-right" /></svg>
             </button>
           </div>
           <p class="sr-only" id="deckStatus" aria-live="polite"></p>
         </div>
       </div>
 
+      <!-- ===== PRESTASI ===== -->
       <section class="section reveal" id="prestasi">
-        <div class="section-heading">
-          <p class="eyebrow">Prestasi & Kompetisi</p>
-          <h2>Beberapa pencapaian yang pernah saya raih</h2>
-          <p class="section-hint">Scroll ke bawah untuk menggeser slide-nya.</p>
-        </div>
+        <header class="section-head">
+          <p class="section-num">03</p>
+          <div>
+            <p class="eyebrow">Prestasi &amp; Kompetisi</p>
+            <h2 class="split">Beberapa pencapaian yang pernah saya raih</h2>
+            <p class="section-hint">Scroll ke bawah untuk menggeser slide-nya.</p>
+          </div>
+        </header>
       </section>
 
       <div
@@ -286,64 +477,95 @@
       >
         <div class="scroll-sticky">
           <div class="slide-track" id="slideTrack">
-            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-01.jpg'); --slide-grad:linear-gradient(135deg, var(--accent), var(--accent-2));">
-              <div class="slide-media"><span class="slide-icon" aria-hidden="true">🥇</span><span class="slide-index">01</span></div>
+            <article class="slide is-gold" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-01.jpg'); --g1:#5eead4; --g2:#6366f1;">
+              <div class="slide-media">
+                <span class="slide-ic"><svg width="30" height="30" viewBox="0 0 24 24"><use href="#i-trophy" /></svg></span>
+                <span class="slide-index">01</span>
+              </div>
               <div class="slide-info">
                 <span class="slide-rank">Medali Emas</span>
                 <h3>Innovation Product</h3>
                 <p>Youth National Science Fair 2023 · Nasional</p>
               </div>
             </article>
-            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-02.jpg'); --slide-grad:linear-gradient(135deg, var(--accent-2), var(--surface-2));">
-              <div class="slide-media"><span class="slide-icon" aria-hidden="true">🥈</span><span class="slide-index">02</span></div>
+
+            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-02.jpg'); --g1:#818cf8; --g2:#22d3ee;">
+              <div class="slide-media">
+                <span class="slide-ic"><svg width="30" height="30" viewBox="0 0 24 24"><use href="#i-award" /></svg></span>
+                <span class="slide-index">02</span>
+              </div>
               <div class="slide-info">
                 <span class="slide-rank">Juara Harapan I</span>
                 <h3>Haryono Semangun Award 2024</h3>
                 <p>Universitas Gadjah Mada · Nasional</p>
               </div>
             </article>
-            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-03.jpg'); --slide-grad:linear-gradient(135deg, var(--surface-2), var(--accent));">
-              <div class="slide-media"><span class="slide-icon" aria-hidden="true">🏅</span><span class="slide-index">03</span></div>
+
+            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-03.jpg'); --g1:#2dd4bf; --g2:#0ea5e9;">
+              <div class="slide-media">
+                <span class="slide-ic"><svg width="30" height="30" viewBox="0 0 24 24"><use href="#i-medal" /></svg></span>
+                <span class="slide-index">03</span>
+              </div>
               <div class="slide-info">
                 <span class="slide-rank">4th Runner-up</span>
                 <h3>Bioetanol 2024</h3>
                 <p>Universitas Jember · Nasional</p>
               </div>
             </article>
-            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-04.jpg'); --slide-grad:linear-gradient(135deg, var(--accent), var(--surface-2));">
-              <div class="slide-media"><span class="slide-icon" aria-hidden="true">🎖️</span><span class="slide-index">04</span></div>
+
+            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-04.jpg'); --g1:#a78bfa; --g2:#5eead4;">
+              <div class="slide-media">
+                <span class="slide-ic"><svg width="30" height="30" viewBox="0 0 24 24"><use href="#i-star" /></svg></span>
+                <span class="slide-index">04</span>
+              </div>
               <div class="slide-info">
                 <span class="slide-rank">Finalis</span>
                 <h3>Adrenaline Olympiad 2024</h3>
                 <p>Unika Widya Mandala Surabaya · Nasional</p>
               </div>
             </article>
-            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-05.jpg'); --slide-grad:linear-gradient(135deg, var(--accent-2), var(--accent));">
-              <div class="slide-media"><span class="slide-icon" aria-hidden="true">🧪</span><span class="slide-index">05</span></div>
+
+            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-05.jpg'); --g1:#34d399; --g2:#818cf8;">
+              <div class="slide-media">
+                <span class="slide-ic"><svg width="30" height="30" viewBox="0 0 24 24"><use href="#i-flask" /></svg></span>
+                <span class="slide-index">05</span>
+              </div>
               <div class="slide-info">
                 <span class="slide-rank">Peserta</span>
                 <h3>Chemical Industry Technology Biggest National Competition 2024</h3>
                 <p>Universitas Padjadjaran · Nasional</p>
               </div>
             </article>
-            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-06.jpg'); --slide-grad:linear-gradient(135deg, var(--surface-2), var(--accent-2));">
-              <div class="slide-media"><span class="slide-icon" aria-hidden="true">✍️</span><span class="slide-index">06</span></div>
+
+            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-06.jpg'); --g1:#f0abfc; --g2:#6366f1;">
+              <div class="slide-media">
+                <span class="slide-ic"><svg width="30" height="30" viewBox="0 0 24 24"><use href="#i-pencil" /></svg></span>
+                <span class="slide-index">06</span>
+              </div>
               <div class="slide-info">
                 <span class="slide-rank">Peserta</span>
                 <h3>Article Competition SCOME CIMSA</h3>
                 <p>Nasional</p>
               </div>
             </article>
-            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-07.jpg'); --slide-grad:linear-gradient(135deg, var(--accent), var(--accent-2));">
-              <div class="slide-media"><span class="slide-icon" aria-hidden="true">🖼️</span><span class="slide-index">07</span></div>
+
+            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-07.jpg'); --g1:#22d3ee; --g2:#a78bfa;">
+              <div class="slide-media">
+                <span class="slide-ic"><svg width="30" height="30" viewBox="0 0 24 24"><use href="#i-image" /></svg></span>
+                <span class="slide-index">07</span>
+              </div>
               <div class="slide-info">
                 <span class="slide-rank">4th Runner-up</span>
                 <h3>Digital Poster, Young Scientific Competition 2025</h3>
                 <p>UNHI Denpasar · Regional</p>
               </div>
             </article>
-            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-08.jpg'); --slide-grad:linear-gradient(135deg, var(--accent-2), var(--surface-2));">
-              <div class="slide-media"><span class="slide-icon" aria-hidden="true">🧠</span><span class="slide-index">08</span></div>
+
+            <article class="slide" aria-roledescription="slide" style="--slide-img:url('assets/prestasi-08.jpg'); --g1:#fbbf24; --g2:#f472b6;">
+              <div class="slide-media">
+                <span class="slide-ic"><svg width="30" height="30" viewBox="0 0 24 24"><use href="#i-bulb" /></svg></span>
+                <span class="slide-index">08</span>
+              </div>
               <div class="slide-info">
                 <span class="slide-rank">3rd Runner-up</span>
                 <h3>Quiz Competition Fancy Fest 2025</h3>
@@ -351,46 +573,50 @@
               </div>
             </article>
           </div>
+
           <div class="slide-controls">
-            <button
-              type="button"
-              class="slide-btn"
-              id="slidePrev"
-              aria-label="Prestasi sebelumnya"
-            >
-              ‹
+            <button type="button" class="slide-btn" id="slidePrev" aria-label="Prestasi sebelumnya">
+              <svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-left" /></svg>
             </button>
-            <button
-              type="button"
-              class="slide-btn"
-              id="slideNext"
-              aria-label="Prestasi berikutnya"
-            >
-              ›
+            <button type="button" class="slide-btn" id="slideNext" aria-label="Prestasi berikutnya">
+              <svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-right" /></svg>
             </button>
           </div>
           <p class="sr-only" id="slideStatus" aria-live="polite"></p>
         </div>
       </div>
 
-      <section class="section reveal contact-section" id="contact">
-        <div class="section-heading">
+      <!-- ===== KONTAK ===== -->
+      <section class="section reveal" id="contact">
+        <div class="contact-card">
+          <div class="cc-glow" aria-hidden="true"></div>
           <p class="eyebrow">Kontak</p>
-          <h2>Yuk, bekerja sama</h2>
+          <h2 class="display-sm split">Yuk, <em>bekerja sama.</em></h2>
+          <p class="cc-lead">
+            Tertarik mengajak saya bergabung dalam kepanitiaan atau ingin
+            berdiskusi lebih lanjut? Silakan hubungi saya.
+          </p>
+          <a class="btn btn-primary btn-lg magnetic" href="mailto:nathaabhiyoga@gmail.com">
+            nathaabhiyoga@gmail.com
+            <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-arrow" /></svg>
+          </a>
+          <div class="cc-meta">
+            <a href="tel:+6281353057459">
+              <svg width="15" height="15" viewBox="0 0 24 24"><use href="#i-phone" /></svg>
+              +62 813-5305-7459
+            </a>
+            <span>
+              <svg width="15" height="15" viewBox="0 0 24 24"><use href="#i-pin" /></svg>
+              Surabaya, Jawa Timur
+            </span>
+          </div>
         </div>
-        <p>
-          Tertarik mengajak saya bergabung dalam kepanitiaan atau ingin
-          berdiskusi lebih lanjut? Silakan hubungi saya.
-        </p>
-        <a class="btn btn-primary" href="mailto:nathaabhiyoga@gmail.com"
-          >nathaabhiyoga@gmail.com</a
-        >
-        <p class="contact-meta">+62 813-5305-7459 · Surabaya, Jawa Timur</p>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 I Gede Wibhu Natha Abhiyoga. Dibuat dengan semangat belajar dan berkembang.</p>
+      <p class="foot-name">I Gede Wibhu Natha Abhiyoga</p>
+      <p>© 2026 · Dibuat dengan semangat belajar dan berkembang.</p>
     </footer>
   </body>
 </html>
