@@ -12,34 +12,74 @@
       content="Portofolio I Gede Wibhu Natha Abhiyoga — mahasiswa Teknologi Kedokteran ITS, koordinator sarana & prasarana, dan pegiat kompetisi ilmiah nasional."
     />
     <meta name="theme-color" id="themeColorMeta" content="#05070d" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://portofolio-gray-seven.vercel.app/" />
+    <link rel="author" href="/humans.txt" />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
     <meta property="og:locale" content="id_ID" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="I Gede Wibhu Natha Abhiyoga" />
     <meta property="og:title" content="I Gede Wibhu Natha Abhiyoga — Portofolio" />
     <meta
       property="og:description"
       content="Mahasiswa Teknologi Kedokteran ITS. Koordinator Sarana & Prasarana untuk acara berskala provinsi."
     />
+    <meta property="og:url" content="https://portofolio-gray-seven.vercel.app/" />
+    <meta property="og:image" content="https://portofolio-gray-seven.vercel.app/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="I Gede Wibhu Natha Abhiyoga — Portofolio" />
+    <meta
+      name="twitter:description"
+      content="Mahasiswa Teknologi Kedokteran ITS. Koordinator Sarana & Prasarana untuk acara berskala provinsi."
+    />
+    <meta name="twitter:image" content="https://portofolio-gray-seven.vercel.app/assets/og-image.png" />
 
+    <link rel="manifest" href="manifest.json" />
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%235eead4'/%3E%3Ctext x='16' y='22' font-size='17' font-family='Georgia,serif' font-style='italic' font-weight='700' text-anchor='middle' fill='%2305070d'%3EA%3C/text%3E%3C/svg%3E"
     />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%235eead4'/%3E%3Ctext x='90' y='124' font-size='96' font-family='Georgia,serif' font-style='italic' font-weight='700' text-anchor='middle' fill='%2305070d'%3EA%3C/text%3E%3C/svg%3E"
+    />
 
-    <script>
-      (function () {
-        var stored = null;
-        try {
-          stored = localStorage.getItem("theme");
-        } catch (e) {}
-        var theme =
-          stored ||
-          (window.matchMedia("(prefers-color-scheme: light)").matches
-            ? "light"
-            : "dark");
-        document.documentElement.setAttribute("data-theme", theme);
-      })();
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "I Gede Wibhu Natha Abhiyoga",
+        "alternateName": "Abhi",
+        "url": "https://portofolio-gray-seven.vercel.app/",
+        "email": "mailto:nathaabhiyoga@gmail.com",
+        "jobTitle": "Mahasiswa Teknologi Kedokteran",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Institut Teknologi Sepuluh Nopember"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Surabaya",
+          "addressRegion": "Jawa Timur",
+          "addressCountry": "ID"
+        },
+        "knowsAbout": [
+          "Manajemen Logistik",
+          "Manajemen Inventaris",
+          "Koordinasi Tim",
+          "Perencanaan Acara"
+        ]
+      }
     </script>
+
+    <!-- Tema & bahasa diset lebih dulu (blocking, same-origin) agar tidak ada flash,
+         dan CSP script-src bisa 'self' saja tanpa unsafe-inline. -->
+    <script src="theme-init.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,7 +91,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip">Lewati ke konten utama</a>
 
     <svg class="sprite" aria-hidden="true" focusable="false">
       <defs>
@@ -148,6 +188,18 @@
         <g id="i-close" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
           <path d="M18 6 6 18M6 6l12 12" />
         </g>
+        <g id="i-globe" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z" />
+        </g>
+        <g id="i-shield" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+          <path d="m9 12 2 2 4-4" />
+        </g>
+        <g id="i-send" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m22 2-7 20-4-9-9-4Z" />
+          <path d="M22 2 11 13" />
+        </g>
       </defs>
     </svg>
 
@@ -160,12 +212,16 @@
         <span class="brand-name">I Gede Wibhu Natha Abhiyoga</span>
       </a>
       <div class="nav-links" id="navLinks">
-        <a href="#about"><span>Tentang</span></a>
-        <a href="#pengalaman"><span>Pengalaman</span></a>
-        <a href="#prestasi"><span>Prestasi</span></a>
-        <a href="#contact"><span>Kontak</span></a>
+        <a href="#about" data-i18n="nav.about">Tentang</a>
+        <a href="#pengalaman" data-i18n="nav.pengalaman">Pengalaman</a>
+        <a href="#prestasi" data-i18n="nav.prestasi">Prestasi</a>
+        <a href="#contact" data-i18n="nav.contact">Kontak</a>
       </div>
       <div class="nav-actions">
+        <button class="icon-btn lang-btn" id="langToggle" type="button" aria-label="Switch to English">
+          <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-globe" /></svg>
+          <span id="langLabel">EN</span>
+        </button>
         <button class="icon-btn" id="themeToggle" type="button" aria-label="Ganti ke mode terang" aria-pressed="false">
           <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24"><use href="#i-moon" /></svg>
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24"><use href="#i-sun" /></svg>
@@ -178,10 +234,10 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu" hidden>
-      <a href="#about"><span class="mm-num">01</span> Tentang</a>
-      <a href="#pengalaman"><span class="mm-num">02</span> Pengalaman</a>
-      <a href="#prestasi"><span class="mm-num">03</span> Prestasi</a>
-      <a href="#contact"><span class="mm-num">04</span> Kontak</a>
+      <a href="#about"><span class="mm-num">01</span> <span data-i18n="nav.about">Tentang</span></a>
+      <a href="#pengalaman"><span class="mm-num">02</span> <span data-i18n="nav.pengalaman">Pengalaman</span></a>
+      <a href="#prestasi"><span class="mm-num">03</span> <span data-i18n="nav.prestasi">Prestasi</span></a>
+      <a href="#contact"><span class="mm-num">04</span> <span data-i18n="nav.contact">Kontak</span></a>
     </div>
 
     <!-- ===================== HERO ===================== -->
@@ -193,16 +249,16 @@
 
       <div class="hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Portofolio &amp; Pengalaman Organisasi</p>
-          <h1 class="display split">Halo, saya <em>Abhi.</em></h1>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Portofolio &amp; Pengalaman Organisasi</p>
+          <h1 class="display split" data-i18n="hero.h1">Halo, saya <em>Abhi.</em></h1>
 
           <div class="hero-chips">
-            <span class="chip">Teknologi Kedokteran ITS</span>
-            <span class="chip">Koordinator Sarpras</span>
+            <span class="chip" data-i18n="hero.chip1">Teknologi Kedokteran ITS</span>
+            <span class="chip" data-i18n="hero.chip2">Koordinator Sarpras</span>
             <span class="chip">Surabaya</span>
           </div>
 
-          <p class="lead">
+          <p class="lead" data-i18n="hero.lead">
             Mahasiswa tahun pertama Teknologi Kedokteran di Institut Teknologi
             Sepuluh Nopember yang aktif, teliti, dan terbiasa bekerja di
             lapangan. Dua kali menjabat Koordinator Divisi Sarana dan Prasarana
@@ -213,7 +269,7 @@
 
           <div class="actions">
             <a class="btn btn-primary" href="#pengalaman">
-              Lihat Pengalaman
+              <span data-i18n="hero.btnExp">Lihat Pengalaman</span>
               <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-arrow" /></svg>
             </a>
             <a class="btn btn-wa" href="https://wa.me/6281353057459" target="_blank" rel="noopener noreferrer">
@@ -222,15 +278,15 @@
             </a>
             <button class="btn btn-ghost" id="printBtn" type="button">
               <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-print" /></svg>
-              Simpan PDF
+              <span data-i18n="hero.btnPdf">Simpan PDF</span>
             </button>
           </div>
 
           <div class="stats">
-            <div class="stat"><strong data-count="4">0</strong><span>Organisasi &amp; kepanitiaan</span></div>
-            <div class="stat"><strong data-count="2" data-suffix="×">0</strong><span>Koordinator Sarpras</span></div>
-            <div class="stat"><strong data-count="8">0</strong><span>Kompetisi diikuti</span></div>
-            <div class="stat"><strong data-count="5">0</strong><span>Kali juara / finalis</span></div>
+            <div class="stat"><strong data-count="4">0</strong><span data-i18n="hero.stat1">Organisasi &amp; kepanitiaan</span></div>
+            <div class="stat"><strong data-count="2" data-suffix="×">0</strong><span data-i18n="hero.stat2">Koordinator Sarpras</span></div>
+            <div class="stat"><strong data-count="8">0</strong><span data-i18n="hero.stat3">Kompetisi diikuti</span></div>
+            <div class="stat"><strong data-count="5">0</strong><span data-i18n="hero.stat4">Kali juara / finalis</span></div>
           </div>
         </div>
 
@@ -239,16 +295,16 @@
             <div class="pc-avatar">A</div>
             <div>
               <p class="pc-name">Wibhu Natha Abhiyoga</p>
-              <p class="pc-role">Logistik &amp; Sarana Prasarana</p>
+              <p class="pc-role" data-i18n="profile.role">Logistik &amp; Sarana Prasarana</p>
             </div>
           </div>
-          <div class="pc-status"><span class="dot"></span> Terbuka untuk kolaborasi kepanitiaan</div>
+          <div class="pc-status"><span class="dot"></span> <span data-i18n="profile.status">Terbuka untuk kolaborasi kepanitiaan</span></div>
           <div class="pc-divider"></div>
-          <p class="pc-label">Yang saya kuasai</p>
+          <p class="pc-label" data-i18n="profile.label">Yang saya kuasai</p>
           <ul class="pc-list">
-            <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-package" /></svg></span> Manajemen logistik &amp; inventaris acara</li>
-            <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-users" /></svg></span> Koordinasi tim lintas divisi</li>
-            <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-zap" /></svg></span> Problem-solving cepat di lapangan</li>
+            <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-package" /></svg></span> <span data-i18n="profile.skill1">Manajemen logistik &amp; inventaris acara</span></li>
+            <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-users" /></svg></span> <span data-i18n="profile.skill2">Koordinasi tim lintas divisi</span></li>
+            <li><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24"><use href="#i-zap" /></svg></span> <span data-i18n="profile.skill3">Problem-solving cepat di lapangan</span></li>
           </ul>
         </aside>
       </div>
@@ -256,12 +312,12 @@
 
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track" id="marqueeTrack">
-        <span>Manajemen Logistik</span><i>✳</i>
-        <span>Perencanaan Pengadaan</span><i>✳</i>
-        <span>Koordinasi Tim</span><i>✳</i>
-        <span>Problem Solving</span><i>✳</i>
-        <span>Manajemen Waktu</span><i>✳</i>
-        <span>Fotografi &amp; Videografi</span><i>✳</i>
+        <span data-i18n="marquee.1">Manajemen Logistik</span><i>✳</i>
+        <span data-i18n="marquee.2">Perencanaan Pengadaan</span><i>✳</i>
+        <span data-i18n="marquee.3">Koordinasi Tim</span><i>✳</i>
+        <span data-i18n="marquee.4">Problem Solving</span><i>✳</i>
+        <span data-i18n="marquee.5">Manajemen Waktu</span><i>✳</i>
+        <span data-i18n="marquee.6">Fotografi &amp; Videografi</span><i>✳</i>
       </div>
     </div>
 
@@ -271,18 +327,18 @@
         <header class="section-head">
           <p class="section-num">01</p>
           <div>
-            <p class="eyebrow">Tentang Saya</p>
-            <h2 class="split">Siap turun tangan langsung di lapangan</h2>
+            <p class="eyebrow" data-i18n="about.eyebrow">Tentang Saya</p>
+            <h2 class="split" data-i18n="about.h2">Siap turun tangan langsung di lapangan</h2>
           </div>
         </header>
 
         <div class="about-grid">
           <div class="about-main">
-            <p class="about-lead">
+            <p class="about-lead" data-i18n="about.leadP">
               Saya percaya setiap acara berjalan lancar karena perencanaan yang
               matang dan kesiapan menghadapi kendala di lokasi.
             </p>
-            <p>
+            <p data-i18n="about.p1">
               Dengan pendekatan yang teliti dan terbiasa bekerja langsung di
               lapangan, saya memastikan setiap kebutuhan perlengkapan dan
               logistik terpenuhi tepat waktu — dari survei awal, negosiasi
@@ -292,12 +348,12 @@
             <div class="edu">
               <p class="block-label">
                 <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-cap" /></svg>
-                Pendidikan
+                <span data-i18n="about.eduLabel">Pendidikan</span>
               </p>
               <div class="edu-item">
                 <span class="edu-year">2025 — 2029</span>
                 <h3>Institut Teknologi Sepuluh Nopember</h3>
-                <p>Teknologi Kedokteran · Surabaya</p>
+                <p data-i18n="about.edu1">Teknologi Kedokteran · Surabaya</p>
               </div>
               <div class="edu-item">
                 <span class="edu-year">2022 — 2025</span>
@@ -308,14 +364,14 @@
           </div>
 
           <div class="skills-panel gcard">
-            <p class="block-label">Keahlian</p>
+            <p class="block-label" data-i18n="about.skillsLabel">Keahlian</p>
             <div class="tag-list">
-              <span>Manajemen Logistik &amp; Inventaris</span>
-              <span>Perencanaan &amp; Penjadwalan Pengadaan</span>
-              <span>Koordinasi Tim</span>
-              <span>Problem-Solving</span>
-              <span>Manajemen Waktu</span>
-              <span>Fotografi &amp; Videografi</span>
+              <span data-i18n="skill.1">Manajemen Logistik &amp; Inventaris</span>
+              <span data-i18n="skill.2">Perencanaan &amp; Penjadwalan Pengadaan</span>
+              <span data-i18n="skill.3">Koordinasi Tim</span>
+              <span data-i18n="skill.4">Problem-Solving</span>
+              <span data-i18n="skill.5">Manajemen Waktu</span>
+              <span data-i18n="skill.6">Fotografi &amp; Videografi</span>
             </div>
           </div>
         </div>
@@ -326,8 +382,8 @@
         <header class="section-head">
           <p class="section-num">02</p>
           <div>
-            <p class="eyebrow">Pengalaman</p>
-            <h2 class="split">Organisasi &amp; kepanitiaan yang saya jalani</h2>
+            <p class="eyebrow" data-i18n="nav.pengalaman">Pengalaman</p>
+            <h2 class="split" data-i18n="exp.h2">Organisasi &amp; kepanitiaan yang saya jalani</h2>
           </div>
         </header>
 
@@ -338,16 +394,16 @@
             </div>
             <article class="tl-card gcard">
               <div class="tl-top">
-                <span class="tl-when">Mei 2026</span>
+                <span class="tl-when" data-i18n="exp.date1">Mei 2026</span>
                 <span class="tl-org">SWEET TALKS</span>
               </div>
-              <h3>Divisi Perlengkapan</h3>
-              <p>
+              <h3 data-i18n="exp.title1">Divisi Perlengkapan</h3>
+              <p data-i18n="exp.desc1">
                 Menyiapkan, menata, dan mengelola perlengkapan acara, serta
                 merespons kebutuhan teknis secara cepat selama kegiatan
                 berlangsung.
               </p>
-              <div class="tl-tags"><span>Equipment</span><span>Eksekusi Lapangan</span></div>
+              <div class="tl-tags"><span data-i18n="exp.tag1a">Equipment</span><span data-i18n="exp.tag1b">Eksekusi Lapangan</span></div>
             </article>
           </li>
 
@@ -357,16 +413,16 @@
             </div>
             <article class="tl-card gcard is-lead">
               <div class="tl-top">
-                <span class="tl-when">Des 2024</span>
+                <span class="tl-when" data-i18n="exp.date2">Des 2024</span>
                 <span class="tl-org">RADIANT 2024</span>
-                <span class="tl-badge">Koordinator</span>
+                <span class="tl-badge" data-i18n="exp.badge">Koordinator</span>
               </div>
-              <h3>Koordinator Sarana &amp; Prasarana</h3>
-              <p>
+              <h3 data-i18n="exp.title2">Koordinator Sarana &amp; Prasarana</h3>
+              <p data-i18n="exp.desc2">
                 Menyusun kebutuhan fasilitas pelatihan, mengelola aset kegiatan,
                 dan menangani kendala logistik mendadak di lokasi.
               </p>
-              <div class="tl-tags"><span>Fasilitas</span><span>Aset</span><span>Troubleshooting</span></div>
+              <div class="tl-tags"><span data-i18n="exp.tag2a">Fasilitas</span><span data-i18n="exp.tag2b">Aset</span><span data-i18n="exp.tag2c">Troubleshooting</span></div>
             </article>
           </li>
 
@@ -376,17 +432,17 @@
             </div>
             <article class="tl-card gcard is-lead">
               <div class="tl-top">
-                <span class="tl-when">Okt 2024</span>
+                <span class="tl-when" data-i18n="exp.date3">Okt 2024</span>
                 <span class="tl-org">CAKRA 2024</span>
-                <span class="tl-badge">Koordinator</span>
+                <span class="tl-badge" data-i18n="exp.badge">Koordinator</span>
               </div>
-              <h3>Koordinator Sarana &amp; Prasarana</h3>
-              <p>
+              <h3 data-i18n="exp.title2">Koordinator Sarana &amp; Prasarana</h3>
+              <p data-i18n="exp.desc3">
                 Merencanakan kebutuhan perlengkapan lintas divisi, mengelola
                 inventaris aset, dan menjadi penghubung utama dengan vendor
                 eksternal.
               </p>
-              <div class="tl-tags"><span>Vendor</span><span>Inventaris</span><span>Lintas Divisi</span></div>
+              <div class="tl-tags"><span data-i18n="exp.tag3a">Vendor</span><span data-i18n="exp.tag3b">Inventaris</span><span data-i18n="exp.tag3c">Lintas Divisi</span></div>
             </article>
           </li>
 
@@ -396,15 +452,15 @@
             </div>
             <article class="tl-card gcard">
               <div class="tl-top">
-                <span class="tl-when">Agu 2023 – Mar 2025</span>
+                <span class="tl-when" data-i18n="exp.date4">Agu 2023 – Mar 2025</span>
                 <span class="tl-org">GENESIS</span>
               </div>
-              <h3>Divisi Digital, Media &amp; Komunikasi</h3>
-              <p>
+              <h3 data-i18n="exp.title4">Divisi Digital, Media &amp; Komunikasi</h3>
+              <p data-i18n="exp.desc4">
                 Memproduksi konten digital dan mendokumentasikan kegiatan
                 organisasi riset ilmiah siswa melalui foto dan video.
               </p>
-              <div class="tl-tags"><span>Konten</span><span>Dokumentasi</span></div>
+              <div class="tl-tags"><span data-i18n="exp.tag4a">Konten</span><span data-i18n="exp.tag4b">Dokumentasi</span></div>
             </article>
           </li>
         </ol>
@@ -415,36 +471,36 @@
         <header class="section-head">
           <p class="section-num">03</p>
           <div>
-            <p class="eyebrow">Prestasi &amp; Kompetisi</p>
-            <h2 class="split">Beberapa pencapaian yang pernah saya raih</h2>
+            <p class="eyebrow" data-i18n="ach.eyebrow">Prestasi &amp; Kompetisi</p>
+            <h2 class="split" data-i18n="ach.h2">Beberapa pencapaian yang pernah saya raih</h2>
           </div>
         </header>
 
         <div class="filters" id="filters" role="group" aria-label="Saring prestasi">
-          <button type="button" class="filter is-on" data-filter="all" aria-pressed="true">Semua <b>8</b></button>
-          <button type="button" class="filter" data-filter="nasional" aria-pressed="false">Nasional <b>6</b></button>
-          <button type="button" class="filter" data-filter="regional" aria-pressed="false">Regional <b>2</b></button>
+          <button type="button" class="filter is-on" data-filter="all" aria-pressed="true"><span data-i18n="filter.all">Semua</span> <b>8</b></button>
+          <button type="button" class="filter" data-filter="nasional" aria-pressed="false"><span data-i18n="filter.national">Nasional</span> <b>6</b></button>
+          <button type="button" class="filter" data-filter="regional" aria-pressed="false"><span data-i18n="filter.regional">Regional</span> <b>2</b></button>
         </div>
 
         <div class="ach-grid" id="achGrid">
           <article class="ach gcard" data-level="nasional" style="--g1:#5eead4; --g2:#6366f1;">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-trophy" /></svg></span>
-              <span class="ach-rank is-gold">Medali Emas</span>
+              <span class="ach-rank is-gold" data-i18n="ach.rank1">Medali Emas</span>
             </div>
             <h3>Innovation Product</h3>
             <p>Youth National Science Fair 2023</p>
-            <span class="ach-lvl">Nasional</span>
+            <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
           <article class="ach gcard" data-level="nasional" style="--g1:#818cf8; --g2:#22d3ee;">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-award" /></svg></span>
-              <span class="ach-rank">Juara Harapan I</span>
+              <span class="ach-rank" data-i18n="ach.rank2">Juara Harapan I</span>
             </div>
             <h3>Haryono Semangun Award 2024</h3>
             <p>Universitas Gadjah Mada</p>
-            <span class="ach-lvl">Nasional</span>
+            <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
           <article class="ach gcard" data-level="nasional" style="--g1:#2dd4bf; --g2:#0ea5e9;">
@@ -454,37 +510,37 @@
             </div>
             <h3>Bioetanol 2024</h3>
             <p>Universitas Jember</p>
-            <span class="ach-lvl">Nasional</span>
+            <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
           <article class="ach gcard" data-level="nasional" style="--g1:#a78bfa; --g2:#5eead4;">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-star" /></svg></span>
-              <span class="ach-rank">Finalis</span>
+              <span class="ach-rank" data-i18n="ach.rank4">Finalis</span>
             </div>
             <h3>Adrenaline Olympiad 2024</h3>
             <p>Unika Widya Mandala Surabaya</p>
-            <span class="ach-lvl">Nasional</span>
+            <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
           <article class="ach gcard" data-level="nasional" style="--g1:#34d399; --g2:#818cf8;">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-flask" /></svg></span>
-              <span class="ach-rank is-muted">Peserta</span>
+              <span class="ach-rank is-muted" data-i18n="ach.rank5">Peserta</span>
             </div>
             <h3>Chemical Industry Technology Biggest National Competition 2024</h3>
             <p>Universitas Padjadjaran</p>
-            <span class="ach-lvl">Nasional</span>
+            <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
           <article class="ach gcard" data-level="nasional" style="--g1:#f0abfc; --g2:#6366f1;">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-pencil" /></svg></span>
-              <span class="ach-rank is-muted">Peserta</span>
+              <span class="ach-rank is-muted" data-i18n="ach.rank5">Peserta</span>
             </div>
             <h3>Article Competition SCOME CIMSA</h3>
             <p>CIMSA Indonesia</p>
-            <span class="ach-lvl">Nasional</span>
+            <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
           <article class="ach gcard" data-level="regional" style="--g1:#22d3ee; --g2:#a78bfa;">
@@ -494,7 +550,7 @@
             </div>
             <h3>Digital Poster, Young Scientific Competition 2025</h3>
             <p>UNHI Denpasar</p>
-            <span class="ach-lvl">Regional</span>
+            <span class="ach-lvl" data-i18n="filter.regional">Regional</span>
           </article>
 
           <article class="ach gcard" data-level="regional" style="--g1:#fbbf24; --g2:#f472b6;">
@@ -504,7 +560,7 @@
             </div>
             <h3>Quiz Competition Fancy Fest 2025</h3>
             <p>Universitas Mahasaraswati</p>
-            <span class="ach-lvl">Regional</span>
+            <span class="ach-lvl" data-i18n="filter.regional">Regional</span>
           </article>
         </div>
         <p class="sr-only" id="filterStatus" aria-live="polite"></p>
@@ -514,9 +570,9 @@
       <section class="section reveal" id="contact">
         <div class="contact-card gcard">
           <div class="cc-glow" aria-hidden="true"></div>
-          <p class="eyebrow">Kontak</p>
-          <h2 class="display-sm split">Yuk, <em>bekerja sama.</em></h2>
-          <p class="cc-lead">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kontak</p>
+          <h2 class="display-sm split" data-i18n="contact.h2">Yuk, <em>bekerja sama.</em></h2>
+          <p class="cc-lead" data-i18n="contact.lead">
             Tertarik mengajak saya bergabung dalam kepanitiaan atau ingin
             berdiskusi lebih lanjut? Silakan hubungi saya.
           </p>
@@ -524,11 +580,11 @@
           <div class="cc-actions">
             <a class="btn btn-wa btn-lg" href="https://wa.me/6281353057459" target="_blank" rel="noopener noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa" /></svg>
-              Chat WhatsApp
+              <span data-i18n="contact.btnWa">Chat WhatsApp</span>
             </a>
             <a class="btn btn-primary btn-lg" href="mailto:nathaabhiyoga@gmail.com">
               <svg width="17" height="17" viewBox="0 0 24 24"><use href="#i-mail" /></svg>
-              Kirim Email
+              <span data-i18n="contact.btnMail">Kirim Email</span>
             </a>
           </div>
 
@@ -548,13 +604,52 @@
               Surabaya, Jawa Timur
             </span>
           </div>
+
+          <div class="cc-divider" aria-hidden="true"></div>
+
+          <form class="cc-form" id="contactForm" novalidate>
+            <p class="cc-form-label" data-i18n="form.label">Atau tulis pesan langsung</p>
+
+            <!-- honeypot anti-bot: kolom tersembunyi, harus tetap kosong -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="cc-form-row">
+              <div class="cc-field">
+                <label for="cf-name" data-i18n="form.name">Nama</label>
+                <input type="text" id="cf-name" name="name" required maxlength="120" autocomplete="name" />
+              </div>
+              <div class="cc-field">
+                <label for="cf-subject" data-i18n="form.subject">Subjek</label>
+                <input type="text" id="cf-subject" name="subject" required maxlength="150" autocomplete="off" />
+              </div>
+            </div>
+            <div class="cc-field">
+              <label for="cf-message" data-i18n="form.message">Pesan</label>
+              <textarea id="cf-message" name="message" required maxlength="2000" rows="4"></textarea>
+            </div>
+            <p class="cc-form-hint" data-i18n="form.hint">
+              Tombol di bawah akan membuka aplikasi email kamu dengan pesan ini
+              sudah terisi — tidak ada data yang disimpan di server mana pun.
+            </p>
+            <button type="submit" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24"><use href="#i-send" /></svg>
+              <span data-i18n="form.submit">Kirim via Email</span>
+            </button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer>
       <p class="foot-name">I Gede Wibhu Natha Abhiyoga</p>
-      <p>© 2026 · Dibuat dengan semangat belajar dan berkembang.</p>
+      <p data-i18n="footer.text">© 2026 · Dibuat dengan semangat belajar dan berkembang.</p>
+      <p class="foot-privacy">
+        <svg width="13" height="13" viewBox="0 0 24 24"><use href="#i-shield" /></svg>
+        <span data-i18n="footer.privacy">Tidak ada cookie pelacak atau analitik pihak ketiga di situs ini.</span>
+      </p>
     </footer>
 
     <button class="to-top" id="toTop" type="button" aria-label="Kembali ke atas" hidden>
