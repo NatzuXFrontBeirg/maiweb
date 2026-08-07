@@ -1,0 +1,8 @@
+/* TEAM */
+Owner & content: I Gede Wibhu Natha Abhiyoga
+Contact: nathaabhiyoga [at] gmail.com
+Location: Surabaya, Jawa Timur, Indonesia
+
+/* SITE */
+Built with: HTML, CSS, vanilla JavaScript — no frameworks, no tracking scripts.
+Hosted on: Vercel
