@@ -5,18 +5,18 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#05070d",
-  "theme_color": "#05070d",
+  "background_color": "#14100c",
+  "theme_color": "#14100c",
   "lang": "id",
   "icons": [
     {
-      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='42' fill='%235eead4'/%3E%3Ctext x='96' y='132' font-size='102' font-family='Georgia,serif' font-style='italic' font-weight='700' text-anchor='middle' fill='%2305070d'%3EA%3C/text%3E%3C/svg%3E",
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='42' fill='%23e8632c'/%3E%3Ctext x='96' y='132' font-size='102' font-family='Georgia,serif' font-style='italic' font-weight='700' text-anchor='middle' fill='%2314100c'%3EA%3C/text%3E%3C/svg%3E",
       "sizes": "192x192",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%235eead4'/%3E%3Ctext x='256' y='352' font-size='272' font-family='Georgia,serif' font-style='italic' font-weight='700' text-anchor='middle' fill='%2305070d'%3EA%3C/text%3E%3C/svg%3E",
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23e8632c'/%3E%3Ctext x='256' y='352' font-size='272' font-family='Georgia,serif' font-style='italic' font-weight='700' text-anchor='middle' fill='%2314100c'%3EA%3C/text%3E%3C/svg%3E",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any"

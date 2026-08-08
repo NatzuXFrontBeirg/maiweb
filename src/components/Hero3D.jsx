@@ -6,8 +6,11 @@ import { prefersReducedMotion } from "../hooks/useInView.js";
 // Catatan: sengaja TIDAK memakai <Environment> dari drei — preset bawaannya
 // (mis. "city") mengunduh file HDR dari CDN pihak ketiga saat runtime,
 // yang melanggar kebijakan nol-request-eksternal situs ini. Pencahayaan
-// di bawah murni 3 lampu manual, dituning supaya tetap terlihat mengkilap
-// tanpa environment map.
+// di bawah murni 2 lampu manual + ambient.
+//
+// Materialnya sengaja matte/flat-shaded (bukan kaca mengkilap dengan
+// clearcoat/iridescence) — bentuk teknis-diagramatik yang lebih senada
+// dengan identitas editorial situs ini, bukan "gem" generik.
 
 function GemCore({ accent, accent2 }) {
   const meshRef = useRef(null);
@@ -17,33 +20,25 @@ function GemCore({ accent, accent2 }) {
   useFrame((_, delta) => {
     if (reduced) return;
     if (meshRef.current) {
-      meshRef.current.rotation.y += delta * 0.22;
-      meshRef.current.rotation.x += delta * 0.08;
+      meshRef.current.rotation.y += delta * 0.2;
+      meshRef.current.rotation.x += delta * 0.07;
     }
     if (wireRef.current) {
-      wireRef.current.rotation.y -= delta * 0.14;
-      wireRef.current.rotation.x -= delta * 0.05;
+      wireRef.current.rotation.y -= delta * 0.13;
+      wireRef.current.rotation.x -= delta * 0.045;
     }
   });
 
   return (
-    <Float speed={reduced ? 0 : 1.6} rotationIntensity={reduced ? 0 : 0.5} floatIntensity={reduced ? 0 : 0.9}>
+    <Float speed={reduced ? 0 : 1.4} rotationIntensity={reduced ? 0 : 0.4} floatIntensity={reduced ? 0 : 0.7}>
       <group>
-        <mesh ref={meshRef} scale={1.35}>
+        <mesh ref={meshRef} scale={1.3}>
           <icosahedronGeometry args={[1, 0]} />
-          <meshPhysicalMaterial
-            color={accent}
-            roughness={0.25}
-            metalness={0.35}
-            clearcoat={0.5}
-            clearcoatRoughness={0.2}
-            emissive={accent2}
-            emissiveIntensity={0.1}
-          />
+          <meshStandardMaterial color={accent} roughness={0.85} metalness={0} flatShading />
         </mesh>
-        <mesh ref={wireRef} scale={1.72}>
+        <mesh ref={wireRef} scale={1.68}>
           <icosahedronGeometry args={[1, 1]} />
-          <meshBasicMaterial color={accent2} wireframe transparent opacity={0.22} />
+          <meshBasicMaterial color={accent2} wireframe transparent opacity={0.35} />
         </mesh>
       </group>
     </Float>
@@ -56,8 +51,8 @@ function GemCore({ accent, accent2 }) {
  * kebijakan "nol request pihak ketiga" di seluruh situs ini.
  */
 export default function Hero3D({ theme }) {
-  const accent = theme === "light" ? "#0d9488" : "#5eead4";
-  const accent2 = theme === "light" ? "#4f46e5" : "#818cf8";
+  const accent = theme === "light" ? "#c8481f" : "#e8632c";
+  const accent2 = theme === "light" ? "#2f6b4c" : "#3f7d5c";
 
   return (
     <div className="hero-3d" aria-hidden="true">
@@ -67,10 +62,9 @@ export default function Hero3D({ theme }) {
           gl={{ antialias: true, alpha: true }}
           camera={{ position: [0, 0, 4.4], fov: 42 }}
         >
-          <ambientLight intensity={0.55} />
-          <directionalLight position={[3, 3, 4]} intensity={1.3} color={accent} />
-          <directionalLight position={[-3, -2, -3]} intensity={0.7} color={accent2} />
-          <pointLight position={[0, 2.4, 2]} intensity={0.6} color="#ffffff" />
+          <ambientLight intensity={0.75} />
+          <directionalLight position={[3, 3, 4]} intensity={1.2} color="#ffffff" />
+          <directionalLight position={[-3, -2, -3]} intensity={0.4} color={accent2} />
           <GemCore accent={accent} accent2={accent2} />
         </Canvas>
       </Suspense>

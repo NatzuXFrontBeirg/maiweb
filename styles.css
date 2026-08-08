@@ -30,59 +30,61 @@
 
 /* ============================================================
    TOKENS
+   Palet hangat (terracotta + hijau tua di atas kertas/ink), bukan
+   teal-indigo-ungu gradasi — itu tampilan generik "template AI SaaS"
+   yang sudah di mana-mana. Satu aksen dipakai tegas, bukan gradasi
+   tiga warna di semua tempat.
    ============================================================ */
 :root {
-  --bg: #05070d;
-  --bg-2: #080b14;
-  --surface: #0d1220;
-  --surface-2: #141b2d;
-  --surface-3: #1b2337;
-  --text: #f2f5fa;
-  --text-2: #c3ccdb;
-  --muted: #8290a8;
-  --accent: #5eead4;
-  --accent-2: #818cf8;
-  --accent-3: #f0abfc;
-  --gold: #fbbf24;
+  --bg: #14100c;
+  --bg-2: #1a1510;
+  --surface: #1f1912;
+  --surface-2: #251e16;
+  --surface-3: #2b2318;
+  --text: #f3ece0;
+  --text-2: #cbbfa9;
+  --muted: #8f8368;
+  --accent: #e8632c;
+  --accent-2: #3f7d5c;
+  --gold: #e0a72e;
   --wa: #25d366;
-  --line: rgba(255, 255, 255, 0.10);
-  --line-soft: rgba(255, 255, 255, 0.06);
-  --fill: rgba(255, 255, 255, 0.05);
-  --fill-soft: rgba(255, 255, 255, 0.03);
-  --on-accent: #05070d;
-  --shadow-lg: 0 40px 80px -40px rgba(0, 0, 0, 0.8);
-  --shadow-md: 0 24px 48px -28px rgba(0, 0, 0, 0.7);
-  --grain-opacity: 0.035;
-  --r-sm: 12px;
-  --r-md: 18px;
-  --r-lg: 24px;
-  --r-xl: 32px;
+  --line: rgba(243, 236, 224, 0.16);
+  --line-soft: rgba(243, 236, 224, 0.09);
+  --fill: rgba(243, 236, 224, 0.07);
+  --fill-soft: rgba(243, 236, 224, 0.035);
+  --on-accent: #14100c;
+  --shadow-lg: 0 30px 60px -32px rgba(0, 0, 0, 0.75);
+  --shadow-md: 0 18px 36px -22px rgba(0, 0, 0, 0.65);
+  --grain-opacity: 0.05;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 20px;
   --maxw: 1180px;
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --bg: #f6f7fa;
-  --bg-2: #ffffff;
-  --surface: #ffffff;
-  --surface-2: #f1f3f8;
-  --surface-3: #e6eaf2;
-  --text: #080c15;
-  --text-2: #3d4759;
-  --muted: #6b7689;
-  --accent: #0d9488;
-  --accent-2: #4f46e5;
-  --accent-3: #c026d3;
-  --gold: #b45309;
+  --bg: #f4ede0;
+  --bg-2: #fbf6ec;
+  --surface: #fffaf1;
+  --surface-2: #efe6d3;
+  --surface-3: #e6d9c0;
+  --text: #1d1712;
+  --text-2: #4a3f30;
+  --muted: #8a7c64;
+  --accent: #c8481f;
+  --accent-2: #2f6b4c;
+  --gold: #a5691a;
   --wa: #128c4a;
-  --line: rgba(8, 12, 21, 0.12);
-  --line-soft: rgba(8, 12, 21, 0.07);
-  --fill: rgba(8, 12, 21, 0.04);
-  --fill-soft: rgba(8, 12, 21, 0.025);
-  --on-accent: #ffffff;
-  --shadow-lg: 0 40px 80px -44px rgba(20, 30, 60, 0.35);
-  --shadow-md: 0 24px 48px -30px rgba(20, 30, 60, 0.28);
-  --grain-opacity: 0.02;
+  --line: rgba(29, 23, 18, 0.16);
+  --line-soft: rgba(29, 23, 18, 0.09);
+  --fill: rgba(29, 23, 18, 0.05);
+  --fill-soft: rgba(29, 23, 18, 0.03);
+  --on-accent: #fffaf1;
+  --shadow-lg: 0 30px 60px -34px rgba(30, 20, 10, 0.28);
+  --shadow-md: 0 18px 36px -22px rgba(30, 20, 10, 0.22);
+  --grain-opacity: 0.028;
   color-scheme: light;
 }
 
@@ -107,35 +109,11 @@ body {
   font-size: 16px;
   line-height: 1.65;
   color: var(--text);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
   transition: background-color 0.35s ease, color 0.35s ease;
-
-  /* Wash pinned to the viewport (not the document) so the same soft glow
-     reads consistently behind every section, not just the hero. Cheap:
-     two gradients, no blur filter, no extra element. */
-  background-color: var(--bg);
-  background-image: radial-gradient(
-      ellipse 58% 42% at 12% -6%,
-      color-mix(in srgb, var(--accent) 13%, transparent),
-      transparent 64%
-    ),
-    radial-gradient(
-      ellipse 46% 36% at 92% 2%,
-      color-mix(in srgb, var(--accent-2) 11%, transparent),
-      transparent 64%
-    );
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: fixed, fixed;
-}
-
-@media (max-width: 820px) {
-  body {
-    /* fixed backgrounds are unreliable with mobile browser chrome
-       resizing; scroll is cheaper and avoids repaint jank on touch */
-    background-attachment: scroll, scroll;
-  }
 }
 
 body.is-locked {
@@ -167,45 +145,45 @@ h1,
 h2,
 h3 {
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   line-height: 1.12;
   margin: 0;
 }
 
 .display {
-  font-size: clamp(2.9rem, 8vw, 6rem);
-  letter-spacing: -0.045em;
-  line-height: 0.98;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(3.2rem, 9vw, 6.6rem);
+  letter-spacing: -0.01em;
+  line-height: 0.96;
 }
 
 .display-sm {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  letter-spacing: -0.04em;
-  line-height: 1.04;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.3rem, 5.5vw, 3.8rem);
+  letter-spacing: -0.01em;
+  line-height: 1.02;
 }
 
 .display em,
 .display-sm em {
-  font-family: "Instrument Serif", Georgia, serif;
   font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  background: linear-gradient(120deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  padding-right: 0.06em;
+  color: var(--accent);
 }
 
 h2 {
-  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  letter-spacing: -0.005em;
 }
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.16em;
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.72rem;
   margin: 0 0 14px;
 }
@@ -226,7 +204,7 @@ p {
   align-items: center;
   gap: 8px;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   font-size: 0.7rem;
   font-weight: 700;
   color: var(--muted);
@@ -303,45 +281,30 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 3px;
   z-index: 1100;
   pointer-events: none;
+  background: var(--fill-soft);
 }
 
 .progress span {
   display: block;
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+  background: var(--accent);
 }
 
-/* gradient-border card */
+/* card standar: solid, garis tegas, bayangan lunak — bukan kaca-buram */
 .gcard {
   position: relative;
   background: var(--surface);
+  border: 1.5px solid var(--line);
   border-radius: var(--r-lg);
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
-.gcard::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  pointer-events: none;
-  background: linear-gradient(145deg, var(--line) 0%, transparent 42%, transparent 58%, var(--line) 100%);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  transition: background 0.35s ease;
-}
-
-.gcard:hover::before {
-  background: linear-gradient(145deg,
-    color-mix(in srgb, var(--accent) 55%, transparent) 0%,
-    transparent 45%, transparent 55%,
-    color-mix(in srgb, var(--accent-2) 50%, transparent) 100%);
+.gcard:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
 }
 
 /* toast */
@@ -352,9 +315,9 @@ p {
   z-index: 1300;
   transform: translate(-50%, 20px);
   padding: 12px 20px;
-  border-radius: 999px;
+  border-radius: var(--r-md);
   background: var(--surface-2);
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line);
   box-shadow: var(--shadow-md);
   color: var(--text);
   font-size: 0.87rem;
@@ -380,9 +343,8 @@ p {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  border: 1px solid var(--line);
-  background: color-mix(in srgb, var(--surface) 90%, transparent);
-  backdrop-filter: blur(10px);
+  border: 1.5px solid var(--line);
+  background: var(--surface);
   color: var(--text);
   cursor: pointer;
   box-shadow: var(--shadow-md);
@@ -415,15 +377,14 @@ p {
   gap: 20px;
   padding: 18px clamp(18px, 4vw, 40px);
   padding-top: max(18px, env(safe-area-inset-top));
-  border-bottom: 1px solid transparent;
-  transition: background-color 0.35s ease, border-color 0.35s ease,
-    padding 0.35s ease, backdrop-filter 0.35s ease;
+  background: transparent;
+  border-bottom: 1.5px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease, padding 0.25s ease;
 }
 
 .nav.is-scrolled {
-  background: color-mix(in srgb, var(--bg) 72%, transparent);
-  backdrop-filter: blur(16px) saturate(140%);
-  border-bottom-color: var(--line-soft);
+  background: var(--bg);
+  border-bottom-color: var(--line);
   padding-top: max(12px, env(safe-area-inset-top));
   padding-bottom: 12px;
 }
@@ -445,8 +406,8 @@ p {
   width: 34px;
   height: 34px;
   flex-shrink: 0;
-  border-radius: 11px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: var(--r-sm);
+  background: var(--accent);
   color: var(--on-accent);
   font-family: "Instrument Serif", Georgia, serif;
   font-style: italic;
@@ -466,7 +427,6 @@ p {
   align-items: center;
   height: 40px;
   padding: 0 14px;
-  border-radius: 999px;
   color: var(--text-2);
   text-decoration: none;
   font-size: 0.88rem;
@@ -480,8 +440,7 @@ p {
   left: 14px;
   bottom: 9px;
   width: 0;
-  height: 1.5px;
-  border-radius: 2px;
+  height: 2px;
   background: var(--accent);
   transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -512,7 +471,7 @@ p {
   height: 40px;
   flex-shrink: 0;
   border-radius: 50%;
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line);
   background: var(--fill);
   color: var(--text);
   cursor: pointer;
@@ -531,7 +490,6 @@ p {
   width: auto;
   height: 40px;
   padding: 0 14px 0 12px;
-  border-radius: 999px;
   gap: 7px;
   font-family: inherit;
   font-size: 0.76rem;
@@ -574,8 +532,7 @@ p {
   justify-content: center;
   gap: 6px;
   padding: 0 clamp(24px, 8vw, 60px);
-  background: color-mix(in srgb, var(--bg) 96%, transparent);
-  backdrop-filter: blur(20px);
+  background: var(--bg);
 }
 
 .mobile-menu[hidden] {
@@ -587,12 +544,13 @@ p {
   align-items: baseline;
   gap: 16px;
   padding: 14px 0;
-  border-bottom: 1px solid var(--line-soft);
+  border-bottom: 1.5px solid var(--line-soft);
   color: var(--text);
   text-decoration: none;
-  font-size: clamp(1.6rem, 7vw, 2.4rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(1.8rem, 7vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
   opacity: 0;
   transform: translateY(18px);
   animation: mm-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -606,8 +564,9 @@ p {
 .mobile-menu a:nth-child(4) { animation-delay: 260ms; }
 
 .mm-num {
+  font-family: "Inter", sans-serif;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.15em;
   color: var(--accent);
 }
@@ -631,66 +590,25 @@ p {
   isolation: isolate;
 }
 
-/* Two soft, slow-drifting glows — restrained on purpose. The page-wide
-   wash on body already carries most of the atmosphere; this just adds
-   a little extra depth behind the hero copy without competing with it. */
+/* Tidak ada blob gradasi mengambang — tipografi besar yang membawa
+   hero, bukan efek cahaya. Satu garis halus sebagai penanda batas. */
 .mesh {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  filter: blur(120px);
-  opacity: 0.3;
-}
-
-.mesh span {
-  position: absolute;
-  display: block;
-  border-radius: 50%;
-}
-
-.mesh-a {
-  width: 40vw;
-  aspect-ratio: 1;
-  top: -18%;
-  right: -10%;
-  background: radial-gradient(circle, var(--accent), transparent 70%);
-  animation: float-a 22s ease-in-out infinite;
-}
-
-.mesh-b {
-  width: 34vw;
-  aspect-ratio: 1;
-  bottom: -22%;
-  left: -12%;
-  background: radial-gradient(circle, var(--accent-2), transparent 70%);
-  animation: float-b 26s ease-in-out infinite;
-}
-
-@keyframes float-a {
-  50% {
-    transform: translate(-4%, 5%) scale(1.08);
-  }
-}
-@keyframes float-b {
-  50% {
-    transform: translate(5%, -4%) scale(1.08);
-  }
+  display: none;
 }
 
 /* Objek 3D — duduk di belakang hero-inner, kira-kira sejajar dengan
-   profile-card kaca-buram supaya sedikit tembus pandang di baliknya.
-   Disembunyikan di layar sempit: perangkat kecil biasanya juga lebih
-   lemah GPU-nya, dan di situ ruang sudah padat oleh teks + kartu. */
+   profile-card supaya sedikit tersembunyi di baliknya. Disembunyikan
+   di layar sempit: perangkat kecil biasanya juga lebih lemah GPU-nya,
+   dan di situ ruang sudah padat oleh teks + kartu. */
 .hero-3d {
   position: absolute;
   top: 6%;
   right: clamp(-20px, 2vw, 40px);
-  width: min(40vw, 440px);
-  height: min(40vw, 440px);
+  width: min(38vw, 420px);
+  height: min(38vw, 420px);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.92;
+  opacity: 0.95;
 }
 
 .hero-3d canvas {
@@ -724,9 +642,9 @@ p {
 }
 
 .chip {
-  padding: 7px 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
+  padding: 7px 13px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-sm);
   background: var(--fill-soft);
   font-size: 0.78rem;
   font-weight: 500;
@@ -746,16 +664,16 @@ p {
   gap: 9px;
   min-height: 50px;
   padding: 0 24px;
-  border-radius: 999px;
-  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  border: 1.5px solid transparent;
   font-family: inherit;
   font-weight: 600;
   font-size: 0.92rem;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease,
+    border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .btn:hover {
@@ -769,23 +687,23 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: var(--accent);
   color: var(--on-accent);
-  box-shadow: 0 16px 34px -18px color-mix(in srgb, var(--accent) 75%, transparent);
+  box-shadow: 0 14px 28px -16px color-mix(in srgb, var(--accent) 65%, transparent);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 22px 44px -18px color-mix(in srgb, var(--accent) 85%, transparent);
+  box-shadow: 0 18px 34px -16px color-mix(in srgb, var(--accent) 75%, transparent);
 }
 
 .btn-wa {
   background: var(--wa);
   color: #fff;
-  box-shadow: 0 16px 34px -18px color-mix(in srgb, var(--wa) 75%, transparent);
+  box-shadow: 0 14px 28px -16px color-mix(in srgb, var(--wa) 65%, transparent);
 }
 
 .btn-wa:hover {
-  box-shadow: 0 22px 44px -18px color-mix(in srgb, var(--wa) 85%, transparent);
+  box-shadow: 0 18px 34px -16px color-mix(in srgb, var(--wa) 75%, transparent);
 }
 
 .btn-ghost {
@@ -805,19 +723,16 @@ p {
   gap: clamp(20px, 3.4vw, 42px);
   margin-top: 44px;
   padding-top: 28px;
-  border-top: 1px solid var(--line-soft);
+  border-top: 1.5px solid var(--line-soft);
 }
 
 .stat strong {
   display: block;
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-weight: 400;
+  color: var(--accent);
   line-height: 1.1;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   font-variant-numeric: tabular-nums;
 }
 
@@ -830,7 +745,6 @@ p {
 
 .profile-card {
   padding: 28px;
-  backdrop-filter: blur(18px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -847,8 +761,8 @@ p {
   width: 52px;
   height: 52px;
   flex-shrink: 0;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: var(--r-md);
+  background: var(--accent);
   color: var(--on-accent);
   font-family: "Instrument Serif", Georgia, serif;
   font-style: italic;
@@ -873,9 +787,9 @@ p {
   align-items: center;
   gap: 8px;
   padding: 7px 13px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--accent-2) 35%, transparent);
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-2);
@@ -885,8 +799,8 @@ p {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 70%, transparent);
+  background: var(--accent-2);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-2) 70%, transparent);
   animation: pulse 2.4s ease-out infinite;
 }
 
@@ -900,14 +814,14 @@ p {
 }
 
 .pc-divider {
-  height: 1px;
+  height: 1.5px;
   background: var(--line-soft);
   margin: 22px 0 20px;
 }
 
 .pc-label {
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   font-size: 0.68rem;
   font-weight: 700;
   color: var(--muted);
@@ -938,9 +852,9 @@ p {
   width: 36px;
   height: 36px;
   flex-shrink: 0;
-  border-radius: 11px;
+  border-radius: var(--r-sm);
   background: var(--surface-2);
-  border: 1px solid var(--line-soft);
+  border: 1.5px solid var(--line-soft);
   color: var(--accent);
 }
 
@@ -950,9 +864,9 @@ p {
 .marquee {
   overflow: hidden;
   padding: 18px 0;
-  border-top: 1px solid var(--line-soft);
-  border-bottom: 1px solid var(--line-soft);
-  background: var(--fill-soft);
+  border-top: 1.5px solid var(--line);
+  border-bottom: 1.5px solid var(--line);
+  background: var(--surface);
   mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
 }
@@ -1014,11 +928,11 @@ p {
 
 .section-num {
   font-family: "Instrument Serif", Georgia, serif;
-  font-size: 1.1rem;
+  font-style: italic;
+  font-size: 1.2rem;
   color: var(--accent);
   margin: 6px 0 0;
   flex-shrink: 0;
-  letter-spacing: 0.08em;
 }
 
 /* ============================================================
@@ -1031,10 +945,11 @@ p {
 }
 
 .about-lead {
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.45;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: 1.4;
   color: var(--text);
   margin-bottom: 18px;
 }
@@ -1047,13 +962,13 @@ p {
 .edu {
   margin-top: 40px;
   padding-top: 30px;
-  border-top: 1px solid var(--line-soft);
+  border-top: 1.5px solid var(--line-soft);
 }
 
 .edu-item {
   position: relative;
   padding: 0 0 22px 26px;
-  border-left: 1px solid var(--line);
+  border-left: 1.5px solid var(--line);
 }
 
 .edu-item:last-child {
@@ -1063,7 +978,7 @@ p {
 .edu-item::before {
   content: "";
   position: absolute;
-  left: -4.5px;
+  left: -5px;
   top: 7px;
   width: 8px;
   height: 8px;
@@ -1075,8 +990,8 @@ p {
 .edu-year {
   display: block;
   font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   color: var(--accent);
   margin-bottom: 5px;
 }
@@ -1105,9 +1020,9 @@ p {
 }
 
 .tag-list span {
-  padding: 9px 15px;
-  border-radius: 999px;
-  border: 1px solid var(--line-soft);
+  padding: 9px 14px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--line-soft);
   background: var(--surface-2);
   font-size: 0.82rem;
   font-weight: 500;
@@ -1155,7 +1070,6 @@ p {
   top: 46px;
   bottom: -22px;
   width: 2px;
-  border-radius: 2px;
   background: var(--line);
 }
 
@@ -1171,18 +1085,18 @@ p {
   width: 46px;
   height: 46px;
   flex-shrink: 0;
-  border-radius: 14px;
+  border-radius: var(--r-md);
   background: var(--surface-2);
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line);
   color: var(--muted);
   transition: color 0.4s ease, border-color 0.4s ease, background-color 0.4s ease,
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tl-row.is-on .tl-node {
-  color: var(--accent);
-  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-  background: color-mix(in srgb, var(--accent) 12%, var(--surface-2));
+  color: var(--on-accent);
+  border-color: var(--accent);
+  background: var(--accent);
   transform: scale(1.06);
 }
 
@@ -1206,7 +1120,7 @@ p {
 
 .tl-when {
   font-size: 0.74rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--muted);
   text-transform: uppercase;
@@ -1221,9 +1135,9 @@ p {
 
 .tl-badge {
   padding: 3px 10px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--gold) 15%, transparent);
-  border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--gold) 16%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--gold) 42%, transparent);
   color: var(--gold);
   font-size: 0.68rem;
   font-weight: 700;
@@ -1232,7 +1146,9 @@ p {
 }
 
 .tl-card h3 {
-  font-size: clamp(1.1rem, 2vw, 1.32rem);
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2.1vw, 1.5rem);
   margin-bottom: 8px;
 }
 
@@ -1252,8 +1168,8 @@ p {
 
 .tl-tags span {
   padding: 5px 11px;
-  border-radius: 999px;
-  border: 1px solid var(--line-soft);
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--line-soft);
   background: var(--fill-soft);
   font-size: 0.72rem;
   font-weight: 500;
@@ -1276,8 +1192,8 @@ p {
   gap: 8px;
   min-height: 42px;
   padding: 0 18px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--line);
   background: var(--fill-soft);
   color: var(--text-2);
   font-family: inherit;
@@ -1291,7 +1207,7 @@ p {
   font-size: 0.72rem;
   font-weight: 700;
   padding: 2px 7px;
-  border-radius: 999px;
+  border-radius: var(--r-sm);
   background: var(--fill);
   color: var(--muted);
 }
@@ -1302,13 +1218,13 @@ p {
 }
 
 .filter.is-on {
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-  color: var(--text);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
 }
 
 .filter.is-on b {
-  background: var(--accent);
+  background: color-mix(in srgb, var(--on-accent) 20%, transparent);
   color: var(--on-accent);
 }
 
@@ -1324,20 +1240,20 @@ p {
   padding: 22px 24px 20px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
 .ach::after {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 3px;
-  border-radius: var(--r-lg) var(--r-lg) 0 0;
-  background: linear-gradient(90deg, var(--g1), var(--g2));
+  height: 4px;
+  background: var(--g1, var(--accent));
 }
 
 .ach:hover {
   transform: translateY(-4px);
+  border-color: var(--g1, var(--accent));
 }
 
 .ach.is-hidden {
@@ -1358,17 +1274,17 @@ p {
   width: 44px;
   height: 44px;
   flex-shrink: 0;
-  border-radius: 13px;
-  background: linear-gradient(140deg, color-mix(in srgb, var(--g1) 22%, transparent), color-mix(in srgb, var(--g2) 22%, transparent));
-  border: 1px solid var(--line-soft);
-  color: var(--text);
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--g1, var(--accent)) 16%, transparent);
+  border: 1.5px solid var(--line-soft);
+  color: var(--g1, var(--accent));
 }
 
 .ach-rank {
   padding: 5px 11px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--accent) 13%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--accent) 38%, transparent);
   color: var(--accent);
   font-size: 0.68rem;
   font-weight: 700;
@@ -1378,8 +1294,8 @@ p {
 }
 
 .ach-rank.is-gold {
-  background: color-mix(in srgb, var(--gold) 15%, transparent);
-  border-color: color-mix(in srgb, var(--gold) 38%, transparent);
+  background: color-mix(in srgb, var(--gold) 16%, transparent);
+  border-color: color-mix(in srgb, var(--gold) 42%, transparent);
   color: var(--gold);
 }
 
@@ -1393,6 +1309,8 @@ p {
   font-size: 1.02rem;
   line-height: 1.32;
   margin-bottom: 6px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .ach > p {
@@ -1405,9 +1323,9 @@ p {
   align-self: flex-start;
   margin-top: auto;
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: var(--r-sm);
   background: var(--surface-2);
-  border: 1px solid var(--line-soft);
+  border: 1.5px solid var(--line-soft);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -1423,26 +1341,17 @@ p {
   text-align: center;
   padding: clamp(44px, 7vw, 80px) clamp(24px, 5vw, 56px);
   border-radius: var(--r-xl);
-  background: linear-gradient(160deg, var(--surface), var(--bg-2));
+  border: 1.5px solid var(--line);
+  background: var(--surface);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
 
 .cc-glow {
-  position: absolute;
-  top: -140px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(90%, 520px);
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, var(--accent), transparent 66%);
-  opacity: 0.2;
-  pointer-events: none;
+  display: none;
 }
 
-/* jangan kenai .cc-glow — ia harus tetap absolute agar tidak memakan tinggi */
-.contact-card > *:not(.cc-glow) {
+.contact-card > * {
   position: relative;
 }
 
@@ -1465,8 +1374,8 @@ p {
   gap: 10px;
   margin-top: 20px;
   padding: 10px 18px;
-  border-radius: 999px;
-  border: 1px dashed var(--line);
+  border-radius: var(--r-sm);
+  border: 1.5px dashed var(--line);
   background: transparent;
   color: var(--text-2);
   font-family: inherit;
@@ -1520,7 +1429,7 @@ p {
 
 /* ---------- form kontak ---------- */
 .cc-divider {
-  height: 1px;
+  height: 1.5px;
   background: var(--line-soft);
   margin: 34px 0 28px;
 }
@@ -1577,7 +1486,7 @@ p {
   width: 100%;
   padding: 12px 14px;
   border-radius: var(--r-sm);
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line);
   background: var(--fill-soft);
   color: var(--text);
   font-family: inherit;
@@ -1611,7 +1520,7 @@ footer {
   text-align: center;
   padding: 40px clamp(18px, 4vw, 40px) 34px;
   padding-bottom: max(34px, env(safe-area-inset-bottom));
-  border-top: 1px solid var(--line-soft);
+  border-top: 1.5px solid var(--line-soft);
   color: var(--muted);
   font-size: 0.84rem;
 }
@@ -1622,7 +1531,7 @@ footer p {
 
 .foot-name {
   font-family: "Instrument Serif", Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--text);
   margin-bottom: 6px !important;
 }
@@ -1635,7 +1544,7 @@ footer p {
   margin-top: 10px !important;
   font-size: 0.76rem;
   color: var(--muted);
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .foot-privacy svg {
@@ -1703,7 +1612,7 @@ footer p {
   .tl-node {
     width: 38px;
     height: 38px;
-    border-radius: 12px;
+    border-radius: var(--r-sm);
   }
 
   .tl-rail::before {
@@ -1753,10 +1662,7 @@ footer p {
   font-style: italic;
   font-size: clamp(4rem, 16vw, 8rem);
   line-height: 1;
-  background: linear-gradient(120deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 
 .nf p {
@@ -1765,17 +1671,22 @@ footer p {
 }
 
 /* ============================================================
-   GRADIENT PRESTASI — lewat data-attribute, bukan style="" inline,
-   supaya CSP style-src bisa 'self' saja tanpa unsafe-inline.
+   AKSEN PRESTASI — dua warna tegas (bukan pelangi 8 hue), lewat
+   data-attribute bukan style="" inline, supaya CSP style-src bisa
+   'self' saja tanpa unsafe-inline.
    ============================================================ */
-.ach[data-gradient="1"] { --g1: #5eead4; --g2: #6366f1; }
-.ach[data-gradient="2"] { --g1: #818cf8; --g2: #22d3ee; }
-.ach[data-gradient="3"] { --g1: #2dd4bf; --g2: #0ea5e9; }
-.ach[data-gradient="4"] { --g1: #a78bfa; --g2: #5eead4; }
-.ach[data-gradient="5"] { --g1: #34d399; --g2: #818cf8; }
-.ach[data-gradient="6"] { --g1: #f0abfc; --g2: #6366f1; }
-.ach[data-gradient="7"] { --g1: #22d3ee; --g2: #a78bfa; }
-.ach[data-gradient="8"] { --g1: #fbbf24; --g2: #f472b6; }
+.ach[data-gradient="1"],
+.ach[data-gradient="3"],
+.ach[data-gradient="5"],
+.ach[data-gradient="7"] {
+  --g1: var(--accent);
+}
+.ach[data-gradient="2"],
+.ach[data-gradient="4"],
+.ach[data-gradient="6"],
+.ach[data-gradient="8"] {
+  --g1: var(--accent-2);
+}
 
 /* ============================================================
    REDUCED MOTION
@@ -1886,7 +1797,6 @@ footer p {
     break-inside: avoid;
   }
 
-  .gcard::before,
   .ach::after,
   .cc-glow {
     display: none !important;
