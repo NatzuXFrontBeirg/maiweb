@@ -1,0 +1,38 @@
+export const TIMELINE = [
+  {
+    icon: "i-package",
+    dateKey: "exp.date1",
+    org: "SWEET TALKS",
+    titleKey: "exp.title1",
+    descKey: "exp.desc1",
+    tagKeys: ["exp.tag1a", "exp.tag1b"],
+    lead: false,
+  },
+  {
+    icon: "i-clipboard",
+    dateKey: "exp.date2",
+    org: "RADIANT 2024",
+    titleKey: "exp.title2",
+    descKey: "exp.desc2",
+    tagKeys: ["exp.tag2a", "exp.tag2b", "exp.tag2c"],
+    lead: true,
+  },
+  {
+    icon: "i-clipboard",
+    dateKey: "exp.date3",
+    org: "CAKRA 2024",
+    titleKey: "exp.title2",
+    descKey: "exp.desc3",
+    tagKeys: ["exp.tag3a", "exp.tag3b", "exp.tag3c"],
+    lead: true,
+  },
+  {
+    icon: "i-video",
+    dateKey: "exp.date4",
+    org: "GENESIS",
+    titleKey: "exp.title4",
+    descKey: "exp.desc4",
+    tagKeys: ["exp.tag4a", "exp.tag4b"],
+    lead: false,
+  },
+];
