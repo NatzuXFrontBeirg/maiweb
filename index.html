@@ -81,11 +81,14 @@
          dan CSP script-src bisa 'self' saja tanpa unsafe-inline. -->
     <script src="theme-init.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font di-host sendiri (assets/fonts) via @font-face di styles.css —
+         tidak ada request ke fonts.googleapis.com / fonts.gstatic.com. -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="assets/fonts/inter-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
@@ -483,7 +486,7 @@
         </div>
 
         <div class="ach-grid" id="achGrid">
-          <article class="ach gcard" data-level="nasional" style="--g1:#5eead4; --g2:#6366f1;">
+          <article class="ach gcard" data-level="nasional" data-gradient="1">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-trophy" /></svg></span>
               <span class="ach-rank is-gold" data-i18n="ach.rank1">Medali Emas</span>
@@ -493,7 +496,7 @@
             <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
-          <article class="ach gcard" data-level="nasional" style="--g1:#818cf8; --g2:#22d3ee;">
+          <article class="ach gcard" data-level="nasional" data-gradient="2">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-award" /></svg></span>
               <span class="ach-rank" data-i18n="ach.rank2">Juara Harapan I</span>
@@ -503,7 +506,7 @@
             <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
-          <article class="ach gcard" data-level="nasional" style="--g1:#2dd4bf; --g2:#0ea5e9;">
+          <article class="ach gcard" data-level="nasional" data-gradient="3">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-medal" /></svg></span>
               <span class="ach-rank">4th Runner-up</span>
@@ -513,7 +516,7 @@
             <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
-          <article class="ach gcard" data-level="nasional" style="--g1:#a78bfa; --g2:#5eead4;">
+          <article class="ach gcard" data-level="nasional" data-gradient="4">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-star" /></svg></span>
               <span class="ach-rank" data-i18n="ach.rank4">Finalis</span>
@@ -523,7 +526,7 @@
             <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
-          <article class="ach gcard" data-level="nasional" style="--g1:#34d399; --g2:#818cf8;">
+          <article class="ach gcard" data-level="nasional" data-gradient="5">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-flask" /></svg></span>
               <span class="ach-rank is-muted" data-i18n="ach.rank5">Peserta</span>
@@ -533,7 +536,7 @@
             <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
-          <article class="ach gcard" data-level="nasional" style="--g1:#f0abfc; --g2:#6366f1;">
+          <article class="ach gcard" data-level="nasional" data-gradient="6">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-pencil" /></svg></span>
               <span class="ach-rank is-muted" data-i18n="ach.rank5">Peserta</span>
@@ -543,7 +546,7 @@
             <span class="ach-lvl" data-i18n="filter.national">Nasional</span>
           </article>
 
-          <article class="ach gcard" data-level="regional" style="--g1:#22d3ee; --g2:#a78bfa;">
+          <article class="ach gcard" data-level="regional" data-gradient="7">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-image" /></svg></span>
               <span class="ach-rank">4th Runner-up</span>
@@ -553,7 +556,7 @@
             <span class="ach-lvl" data-i18n="filter.regional">Regional</span>
           </article>
 
-          <article class="ach gcard" data-level="regional" style="--g1:#fbbf24; --g2:#f472b6;">
+          <article class="ach gcard" data-level="regional" data-gradient="8">
             <div class="ach-top">
               <span class="ach-ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#i-bulb" /></svg></span>
               <span class="ach-rank">3rd Runner-up</span>

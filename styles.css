@@ -1,4 +1,34 @@
 /* ============================================================
+   FONTS — di-host sendiri, tidak ada request ke pihak ketiga.
+   Inter di-serve Google sebagai satu file variable font yang
+   mencakup bobot 100–900, jadi cukup satu @font-face untuk semua
+   ketebalan yang dipakai (400/500/600/700/800/900).
+   ============================================================ */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("assets/fonts/inter-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/instrument-serif-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/instrument-serif-italic.woff2") format("woff2");
+}
+
+/* ============================================================
    TOKENS
    ============================================================ */
 :root {
@@ -1669,6 +1699,49 @@ footer p {
     width: 40px;
   }
 }
+
+/* ============================================================
+   404
+   ============================================================ */
+.nf {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  gap: 18px;
+}
+
+.nf-code {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(4rem, 16vw, 8rem);
+  line-height: 1;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nf p {
+  color: var(--text-2);
+  max-width: 44ch;
+}
+
+/* ============================================================
+   GRADIENT PRESTASI — lewat data-attribute, bukan style="" inline,
+   supaya CSP style-src bisa 'self' saja tanpa unsafe-inline.
+   ============================================================ */
+.ach[data-gradient="1"] { --g1: #5eead4; --g2: #6366f1; }
+.ach[data-gradient="2"] { --g1: #818cf8; --g2: #22d3ee; }
+.ach[data-gradient="3"] { --g1: #2dd4bf; --g2: #0ea5e9; }
+.ach[data-gradient="4"] { --g1: #a78bfa; --g2: #5eead4; }
+.ach[data-gradient="5"] { --g1: #34d399; --g2: #818cf8; }
+.ach[data-gradient="6"] { --g1: #f0abfc; --g2: #6366f1; }
+.ach[data-gradient="7"] { --g1: #22d3ee; --g2: #a78bfa; }
+.ach[data-gradient="8"] { --g1: #fbbf24; --g2: #f472b6; }
 
 /* ============================================================
    REDUCED MOTION
