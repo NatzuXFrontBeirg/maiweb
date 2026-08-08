@@ -26,7 +26,7 @@ export function AppStateProvider({ children }) {
       localStorage.setItem("theme", theme);
     } catch (e) {}
     const meta = document.getElementById("themeColorMeta");
-    if (meta) meta.setAttribute("content", theme === "light" ? "#f6f7fa" : "#05070d");
+    if (meta) meta.setAttribute("content", theme === "light" ? "#f4ede0" : "#14100c");
   }, [theme]);
 
   useEffect(() => {
