@@ -467,8 +467,8 @@ p {
 .icon-btn {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   border-radius: 50%;
   border: 1.5px solid var(--line);
@@ -488,7 +488,7 @@ p {
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 40px;
+  height: 44px;
   padding: 0 14px 0 12px;
   gap: 7px;
   font-family: inherit;
@@ -1190,7 +1190,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 42px;
+  min-height: 44px;
   padding: 0 18px;
   border-radius: var(--r-sm);
   border: 1.5px solid var(--line);
