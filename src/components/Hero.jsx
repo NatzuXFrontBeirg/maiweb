@@ -77,7 +77,6 @@ export default function Hero() {
 
         <aside className="profile-card gcard">
           <div className="pc-head">
-            <div className="pc-avatar">A</div>
             <div>
               <p className="pc-name">Wibhu Natha Abhiyoga</p>
               <T k="profile.role" as="p" className="pc-role" />
