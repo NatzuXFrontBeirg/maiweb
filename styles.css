@@ -637,18 +637,24 @@ p {
 .hero-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 24px 0 22px;
+  align-items: center;
+  gap: 9px;
+  margin: 20px 0 22px;
+  font-size: 0.82rem;
+  color: var(--muted);
 }
 
 .chip {
-  padding: 7px 13px;
-  border: 1.5px solid var(--line);
-  border-radius: var(--r-sm);
-  background: var(--fill-soft);
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--text-2);
+  letter-spacing: 0.01em;
+}
+
+.chip + .chip::before {
+  content: "\2022";
+  margin-right: 9px;
+  color: var(--muted);
 }
 
 .actions {
@@ -743,41 +749,28 @@ p {
   margin-top: 2px;
 }
 
+/* Kartu profil bergaya "dossier" cetak, bukan kartu SaaS mengambang —
+   tanpa shadow, tanpa avatar kotak berwarna, tanpa dot berdenyut. */
 .profile-card {
-  padding: 28px;
-  box-shadow: var(--shadow-lg);
+  padding: 30px 28px;
+  border-top: 3px solid var(--accent);
+  border-radius: var(--r-sm);
+  box-shadow: none;
 }
 
 .pc-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-.pc-avatar {
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  flex-shrink: 0;
-  border-radius: var(--r-md);
-  background: var(--accent);
-  color: var(--on-accent);
-  font-family: "Instrument Serif", Georgia, serif;
-  font-style: italic;
-  font-size: 1.7rem;
+  margin-bottom: 16px;
 }
 
 .pc-name {
   margin: 0;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 1.02rem;
   letter-spacing: -0.02em;
 }
 
 .pc-role {
-  margin: 0;
+  margin: 2px 0 0;
   font-size: 0.8rem;
   color: var(--muted);
 }
@@ -785,38 +778,25 @@ p {
 .pc-status {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 13px;
-  border-radius: var(--r-sm);
-  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
-  border: 1.5px solid color-mix(in srgb, var(--accent-2) 35%, transparent);
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-2);
+  gap: 7px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 .pc-status .dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--accent-2);
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-2) 70%, transparent);
-  animation: pulse 2.4s ease-out infinite;
-}
-
-@keyframes pulse {
-  70% {
-    box-shadow: 0 0 0 8px transparent;
-  }
-  100% {
-    box-shadow: 0 0 0 0 transparent;
-  }
+  flex-shrink: 0;
 }
 
 .pc-divider {
   height: 1.5px;
   background: var(--line-soft);
-  margin: 22px 0 20px;
+  margin: 20px 0 18px;
 }
 
 .pc-label {
@@ -825,7 +805,7 @@ p {
   font-size: 0.68rem;
   font-weight: 700;
   color: var(--muted);
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 }
 
 .pc-list {
@@ -834,28 +814,31 @@ p {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .pc-list li {
   display: flex;
-  align-items: center;
-  gap: 13px;
+  align-items: baseline;
+  gap: 11px;
   font-size: 0.88rem;
   color: var(--text-2);
   line-height: 1.45;
 }
 
 .ic {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
+  display: inline-block;
   flex-shrink: 0;
-  border-radius: var(--r-sm);
-  background: var(--surface-2);
-  border: 1.5px solid var(--line-soft);
   color: var(--accent);
+  line-height: 1;
+}
+
+.ic svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 2px;
 }
 
 /* ============================================================
