@@ -1222,20 +1222,11 @@ p {
   flex-direction: column;
   padding: 22px 24px 20px;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-}
-
-.ach::after {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: var(--g1, var(--accent));
+  border-top: 3px solid var(--g1, var(--accent));
+  transition: border-color 0.25s ease;
 }
 
 .ach:hover {
-  transform: translateY(-4px);
   border-color: var(--g1, var(--accent));
 }
 
@@ -1252,14 +1243,8 @@ p {
 }
 
 .ach-ic {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
+  display: inline-flex;
   flex-shrink: 0;
-  border-radius: var(--r-md);
-  background: color-mix(in srgb, var(--g1, var(--accent)) 16%, transparent);
-  border: 1.5px solid var(--line-soft);
   color: var(--g1, var(--accent));
 }
 
