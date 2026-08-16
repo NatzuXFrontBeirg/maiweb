@@ -135,8 +135,8 @@ export const I18N = {
   },
 
   "footer.text": {
-    id: "© 2026 · Dibuat dengan semangat belajar dan berkembang.",
-    en: "© 2026 · Built with a drive to keep learning and growing.",
+    id: "Dibuat dengan semangat belajar dan berkembang.",
+    en: "Built with a drive to keep learning and growing.",
   },
   "footer.privacy": {
     id: "Tidak ada cookie pelacak atau analitik pihak ketiga di situs ini.",
