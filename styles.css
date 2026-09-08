@@ -483,6 +483,11 @@ p {
   transform: translateY(-1px);
 }
 
+.icon-btn:active {
+  transform: translateY(0) scale(0.93);
+  transition-duration: 0.1s;
+}
+
 .lang-btn {
   display: inline-flex;
   align-items: center;
@@ -684,6 +689,19 @@ p {
 
 .btn:hover {
   transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: 0.1s;
+}
+
+.btn svg {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover svg:last-child {
+  transform: translateX(3px);
 }
 
 .btn-lg {
@@ -1183,7 +1201,13 @@ p {
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease,
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filter:active {
+  transform: scale(0.96);
+  transition-duration: 0.1s;
 }
 
 .filter b {
@@ -1468,6 +1492,7 @@ p {
   outline: none;
   border-color: var(--accent);
   background: var(--fill);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 .cc-form-hint {
