@@ -60,8 +60,8 @@ function CrateCluster({ accent, accent2 }) {
  * kebijakan "nol request pihak ketiga" di seluruh situs ini.
  */
 export default function Hero3D({ theme }) {
-  const accent = theme === "light" ? "#c8481f" : "#e8632c";
-  const accent2 = theme === "light" ? "#2f6b4c" : "#3f7d5c";
+  const accent = theme === "light" ? "#2f4a73" : "#6690c7";
+  const accent2 = theme === "light" ? "#5b6472" : "#8b93a0";
 
   return (
     <div className="hero-3d" aria-hidden="true">
