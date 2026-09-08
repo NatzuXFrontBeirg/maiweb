@@ -30,29 +30,29 @@
 
 /* ============================================================
    TOKENS
-   Palet hangat (terracotta + hijau tua di atas kertas/ink), bukan
-   teal-indigo-ungu gradasi — itu tampilan generik "template AI SaaS"
-   yang sudah di mana-mana. Satu aksen dipakai tegas, bukan gradasi
-   tiga warna di semua tempat.
+   Netral (grafit/tinta di atas abu-putih) dengan satu aksen biru
+   tua yang tenang — bukan duo terracotta+hijau yang trendi, dan
+   bukan gradasi teal-indigo-ungu generik "template AI SaaS" juga.
+   Minimalis: satu aksen dipakai tegas dan jarang, bukan warna-warni.
    ============================================================ */
 :root {
-  --bg: #14100c;
-  --bg-2: #1a1510;
-  --surface: #1f1912;
-  --surface-2: #251e16;
-  --surface-3: #2b2318;
-  --text: #f3ece0;
-  --text-2: #cbbfa9;
-  --muted: #8f8368;
-  --accent: #e8632c;
-  --accent-2: #3f7d5c;
-  --gold: #e0a72e;
+  --bg: #121214;
+  --bg-2: #17181b;
+  --surface: #1c1d21;
+  --surface-2: #212227;
+  --surface-3: #272830;
+  --text: #ececee;
+  --text-2: #b4b5bc;
+  --muted: #83838c;
+  --accent: #6690c7;
+  --accent-2: #8b93a0;
+  --gold: #d1a63a;
   --wa: #25d366;
-  --line: rgba(243, 236, 224, 0.16);
-  --line-soft: rgba(243, 236, 224, 0.09);
-  --fill: rgba(243, 236, 224, 0.07);
-  --fill-soft: rgba(243, 236, 224, 0.035);
-  --on-accent: #14100c;
+  --line: rgba(236, 236, 238, 0.14);
+  --line-soft: rgba(236, 236, 238, 0.08);
+  --fill: rgba(236, 236, 238, 0.06);
+  --fill-soft: rgba(236, 236, 238, 0.03);
+  --on-accent: #121214;
   --shadow-lg: 0 30px 60px -32px rgba(0, 0, 0, 0.75);
   --shadow-md: 0 18px 36px -22px rgba(0, 0, 0, 0.65);
   --grain-opacity: 0.05;
@@ -65,26 +65,26 @@
 }
 
 :root[data-theme="light"] {
-  --bg: #f4ede0;
-  --bg-2: #fbf6ec;
-  --surface: #fffaf1;
-  --surface-2: #efe6d3;
-  --surface-3: #e6d9c0;
-  --text: #1d1712;
-  --text-2: #4a3f30;
-  --muted: #8a7c64;
-  --accent: #c8481f;
-  --accent-2: #2f6b4c;
-  --gold: #a5691a;
+  --bg: #f4f4f2;
+  --bg-2: #fbfbfa;
+  --surface: #ffffff;
+  --surface-2: #eeeeec;
+  --surface-3: #e3e3e0;
+  --text: #1a1b1e;
+  --text-2: #494a50;
+  --muted: #82838a;
+  --accent: #2f4a73;
+  --accent-2: #5b6472;
+  --gold: #9c7a1f;
   --wa: #128c4a;
-  --line: rgba(29, 23, 18, 0.16);
-  --line-soft: rgba(29, 23, 18, 0.09);
-  --fill: rgba(29, 23, 18, 0.05);
-  --fill-soft: rgba(29, 23, 18, 0.03);
-  --on-accent: #fffaf1;
-  --shadow-lg: 0 30px 60px -34px rgba(30, 20, 10, 0.28);
-  --shadow-md: 0 18px 36px -22px rgba(30, 20, 10, 0.22);
-  --grain-opacity: 0.028;
+  --line: rgba(26, 27, 30, 0.14);
+  --line-soft: rgba(26, 27, 30, 0.08);
+  --fill: rgba(26, 27, 30, 0.05);
+  --fill-soft: rgba(26, 27, 30, 0.03);
+  --on-accent: #f7f8fa;
+  --shadow-lg: 0 30px 60px -34px rgba(20, 20, 22, 0.24);
+  --shadow-md: 0 18px 36px -22px rgba(20, 20, 22, 0.19);
+  --grain-opacity: 0.024;
   color-scheme: light;
 }
 
