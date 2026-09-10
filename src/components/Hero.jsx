@@ -6,6 +6,8 @@ import StatCounter from "./StatCounter.jsx";
 import { useAppState } from "../hooks/useAppState.jsx";
 import { useToast } from "../hooks/useToast.jsx";
 import { useMediaQuery } from "../hooks/useMediaQuery.js";
+import { TIMELINE } from "../data/timeline.js";
+import { ACHIEVEMENTS } from "../data/achievements.js";
 
 const Hero3D = lazy(() => import("./Hero3D.jsx"));
 
@@ -68,9 +70,9 @@ export default function Hero() {
           </div>
 
           <div className="stats">
-            <StatCounter target={4} labelKey="hero.stat1" />
+            <StatCounter target={TIMELINE.length} labelKey="hero.stat1" />
             <StatCounter target={2} suffix="×" labelKey="hero.stat2" />
-            <StatCounter target={8} labelKey="hero.stat3" />
+            <StatCounter target={ACHIEVEMENTS.length} labelKey="hero.stat3" />
             <StatCounter target={5} labelKey="hero.stat4" />
           </div>
         </div>

@@ -51,6 +51,15 @@ export const ACHIEVEMENTS = [
     org: "CIMSA Indonesia",
   },
   {
+    icon: "i-cube",
+    level: "nasional",
+    gradient: 9,
+    rankKey: "ach.rank5",
+    rankClass: "is-muted",
+    title: "PKM-KC (Program Kreativitas Mahasiswa - Karsa Cipta)",
+    org: "Kemendikbudristek",
+  },
+  {
     icon: "i-image",
     level: "regional",
     gradient: 7,

@@ -1671,7 +1671,8 @@ footer p {
 .ach[data-gradient="1"],
 .ach[data-gradient="3"],
 .ach[data-gradient="5"],
-.ach[data-gradient="7"] {
+.ach[data-gradient="7"],
+.ach[data-gradient="9"] {
   --g1: var(--accent);
 }
 .ach[data-gradient="2"],
